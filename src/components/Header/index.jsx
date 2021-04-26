@@ -24,22 +24,17 @@ export default function Header() {
         </Link>
         <div>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/empresarial">Empresarial</Link>
-            </li>
-            <li>
-              <Link to="/contato">Contato</Link>
-            </li>
-            <li>
-              <Link to="/vagas">Vagas</Link>
-            </li>
+            <Link to="/">
+              <li>Para você</li>
+            </Link>
+            <Link to="/empresarial">
+              <li>Para empresas</li>
+            </Link>
+
             <FiMenu size={30} onClick={onOpen} />
           </ul>
 
-          <Button leftIcon={<FiUser size={20} />}>Minha Conta</Button>
+          <Button leftIcon={<FiUser size={20} />}>Minha conta</Button>
         </div>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
@@ -47,6 +42,18 @@ export default function Header() {
             <ModalCloseButton />
             <ModalBody>
               <h1>Menu Mobile</h1>
+              <h1>Menu Mobile</h1>
+              <h1>Menu Mobile</h1>
+              <h1>Menu Mobile</h1>
+              <ul>
+            <Link to="/">
+              <li>Para você</li>
+            </Link>
+            <Link to="/empresarial">
+              <li>Para empresas</li>
+            </Link>
+
+          </ul>
             </ModalBody>
           </ModalContent>
         </Modal>

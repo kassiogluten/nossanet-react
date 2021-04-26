@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --branco: #FFFFFF;
     --acessibilidade: #64CF60;
+    --verdesecundaria: #6EF269;
 ;
   }
 
