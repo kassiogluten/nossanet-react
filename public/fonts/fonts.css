@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "UniNeue";
+  src: url("UniNeueBook.ttf") format("truetype"),
+    url("UniNeueBook.otf") format("otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "UniNeue";
+  src: url("UniNeueRegular.ttf") format("truetype"),
+    url("UniNeueRegular.otf") format("otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "UniNeueBold";
+  src: url("UniNeueBold.ttf") format("truetype"),
+    url("UniNeueBold.otf") format("otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "UniNeue";
+  src: url("UniNeueHeavy.ttf") format("truetype"),
+    url("UniNeueHeavy.otf") format("otf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "UniNeue";
+  src: url("UniNeueBlack.ttf") format("truetype"),
+    url("UniNeueBlack.otf") format("otf");
+  font-weight: 900;
+}
