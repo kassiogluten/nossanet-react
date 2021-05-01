@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --acessibilidade: #64CF60;
     --verdesecundaria: #6EF269;
     --azulprimaria: #003B63;
+    --azul: #081150;
 
   }
 

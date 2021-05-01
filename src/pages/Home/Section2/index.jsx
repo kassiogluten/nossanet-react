@@ -91,6 +91,7 @@ export default function Section2() {
             </ul>
             <h1>Internet 100% Fibra Optica.</h1>
             <Button
+              bg="#fff"
               color="#081150"
               whileTap={{ scale: 0.975 }}
               w={295}

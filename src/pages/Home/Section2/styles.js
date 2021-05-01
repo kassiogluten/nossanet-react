@@ -14,6 +14,9 @@ export const Section2Container = styled.section`
   @media (max-width: 1500px) {
     background-position: right 5% top 40%;
   }
+  @media (max-width: 700px) {
+    background-position: right 0% bottom 48%;
+  }
 `;
 
 export const Section2Content = styled.div`
@@ -74,6 +77,13 @@ export const Content = styled(motion.div)`
   margin-top: 63px;
   width: 100%;
 
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    padding:0 1rem;
+  }
+
   .box1 {
     margin-top: 30px;
     padding: 40px 48px;
@@ -86,31 +96,56 @@ export const Content = styled(motion.div)`
     );
     border-radius: 15px;
 
-    ul {
-      display: flex;
-      font-family: "Poppins";
-      font-size: 0.9rem;
-      font-weight: 400;
-      list-style:none;
-      margin-bottom:1rem;
 
-      li + li {
-        margin-left: 28px;
-        padding-left: 5px;
-        list-style-image: url(${poligonoBrancoImg});
-        
+      ul {
+        display: flex;
+        font-family: "Poppins";
+        font-size: 0.9rem;
+        font-weight: 400;
+        list-style: none;
+        margin-bottom: 1rem;
+        flex-wrap:wrap;
+
+        li + li {
+          margin-left: 28px;
+          padding-left: 5px;
+          list-style-image: url(${poligonoBrancoImg});
         }
+      }
+
+    @media (max-width: 700px) {
+      width: 100%;
+      padding: 40px 20px;
+      height: 246px;
+
+      h1 {
+          font-size: 2.5rem;
+        }
+
+      button {
+        bottom: -40px;
+        }
+    
+      ul {
+        li + li {
+          margin-left: 1.75rem;
+          padding-left: 0;
+          
+          }
+        }
+
       }
     }
     h1 {
       font-size: 3rem;
       font-weight: 800;
     }
-    button{
+    button {
       font-weight: 700;
       font-size: 1.125rem;
       position: relative;
       bottom: -40px;
+      max-width: 90%;
     }
   }
 
@@ -123,6 +158,11 @@ export const Content = styled(motion.div)`
       mix-blend-mode: normal;
       filter: drop-shadow(0px 0px 118px rgba(0, 0, 0, 0.15));
       z-index: 1;
+    }
+    @media (max-width: 700px) {
+    bottom: 0px;
+    margin: 10rem 0 4rem;
+
     }
   
 `;

@@ -9,8 +9,7 @@ export const Section1HeroContainer = styled.main`
   color: var(--branco);
   @media (max-width: 1200px) {
     background-position: center top;
-    background-size:cover;
-    
+    background-size: cover;
   }
 `;
 export const Section1HeroContent = styled.div`
@@ -36,7 +35,7 @@ export const Section1HeroContent = styled.div`
     line-height: 110%;
 
     @media (max-width: 700px) {
-      width: 95vw;
+      width: 90vw;
       font-size: 2.5rem;
       // margin-top: 175px;
     }
@@ -49,6 +48,7 @@ export const Section1HeroContent = styled.div`
     font-size: 1.125rem;
     margin-top: 100px;
     font-weight: 700;
+    max-width: 90%;
 
     @media (max-width: 700px) {
       margin: 40px 0;
