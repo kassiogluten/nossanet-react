@@ -21,37 +21,46 @@ export const HeaderContent = styled.div`
     display: flex;
 
     button {
-      color:var(--branco);
+      color: var(--branco);
       font-size: 1.15rem;
       font-weight: 600;
       background-color: var(--acessibilidade);
-      width:169px;
-      height:44px;
-      margin-left:25px;
+      width: 169px;
+      height: 44px;
+      margin-left: 25px;
 
       @media (max-width: 700px) {
         display: none;
       }
 
       &:hover {
-        background-color: #51A84E;
+        background-color: #51a84e;
       }
     }
   }
 
   ul {
     display: flex;
-    align-items: center;
+    justify-content: center;
     color: var(--branco);
+    gap: 0.5rem;
 
     li {
+      margin-left: 0.5rem;
       font-size: 1.1rem;
       font-weight: 600;
-      padding: 0 0.75rem;
+      padding: 0.5rem;
       list-style: none;
+      transition: border 500ms ease;
 
       @media (max-width: 700px) {
         display: none;
+      }
+    }
+    a {
+      &:hover {
+        border-bottom-width: 3px;
+        border-bottom-color: var(--acessibilidade);
       }
     }
 

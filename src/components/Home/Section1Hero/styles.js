@@ -48,7 +48,7 @@ export const Section1HeroContent = styled.div`
   button {
     font-size: 1.125rem;
     margin-top: 100px;
-    font-weight: 800;
+    font-weight: 700;
 
     @media (max-width: 700px) {
       margin: 40px 0;

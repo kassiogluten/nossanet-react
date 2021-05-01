@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { HeaderContainer, HeaderContent } from "./styles";
 import {
@@ -19,17 +19,30 @@ export default function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Link to="/">
+        <NavLink to="/">
           <img src={logoNossanetBrancaImg} alt="Logo NossaNet" />
-        </Link>
+        </NavLink>
         <div>
           <ul>
-            <Link to="/">
+            <NavLink
+              exact={true}
+              activeStyle={{
+                borderBottomWidth: "3px",
+                borderBottomColor: "var(--acessibilidade)",
+              }}
+              to="/"
+            >
               <li>Para você</li>
-            </Link>
-            <Link to="/empresarial">
+            </NavLink>
+            <NavLink
+              activeStyle={{
+                borderBottomWidth: "3px",
+                borderBottomColor: "var(--acessibilidade)",
+              }}
+              to="/empresarial"
+            >
               <li>Para empresas</li>
-            </Link>
+            </NavLink>
 
             <FiMenu size={30} onClick={onOpen} />
           </ul>
@@ -46,14 +59,13 @@ export default function Header() {
               <h1>Menu Mobile</h1>
               <h1>Menu Mobile</h1>
               <ul>
-            <Link to="/">
-              <li>Para você</li>
-            </Link>
-            <Link to="/empresarial">
-              <li>Para empresas</li>
-            </Link>
-
-          </ul>
+                <NavLink to="/">
+                  <li>Para você</li>
+                </NavLink>
+                <NavLink to="/empresarial">
+                  <li>Para empresas</li>
+                </NavLink>
+              </ul>
             </ModalBody>
           </ModalContent>
         </Modal>
