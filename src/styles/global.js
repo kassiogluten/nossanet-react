@@ -5,7 +5,8 @@ export const GlobalStyle = createGlobalStyle`
     --branco: #FFFFFF;
     --acessibilidade: #64CF60;
     --verdesecundaria: #6EF269;
-;
+    --azulprimaria: #003B63;
+
   }
 
   * {
@@ -20,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    //font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
   }
 
@@ -29,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 93.75%;
     }
 
-    @media(max-width: 720px) {
+    @media(max-width: 700px) {
       font-size: 87.5%;
     }
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import banner1Img from "../../assets/banner1-paravoceB.jpg";
+import banner1Img from "../../../assets/banner1-paravoceB.jpg";
 
 export const Section1HeroContainer = styled.main`
   padding: 0 0.75rem;
