@@ -202,13 +202,15 @@ export default function Section5() {
             .filter((plano) => plano.cidade === selectedCity)
             .map((plano, index) => (
               <motion.div
+                exitBeforeEnter
                 initial={{ scale: 0.9, top: 100, opacity: 0 }}
                 animate={{
                   scale: 1,
                   top: 0,
                   opacity: 1,
-                  transition: { duration: 0.3, delay: index / 15 },
+                  transition: { duration: 0.3, delay: 0.3 + index / 15 },
                 }}
+                exit={{ opacity: 0, transition: { duration: 0.3 } }}
                 className="plano"
                 key={index + plano.cidade}
               >

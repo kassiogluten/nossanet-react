@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import iconeQualificaImg from "../../../assets/icone-qualifica.png";
+import poligonoVerdeImg from "../../../assets/poligono-verde.svg";
 
 export const Section5Container = styled.section`
   position: relative;
@@ -60,7 +61,7 @@ export const Section5Content = styled.div`
       justify-content: space-between;
       height: 100%;
       flex-grow: 1;
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 1.5rem;
       border-left-width: 2px;
       border-left-color: #e6e6e6;
       border-right-width: 2px;
@@ -74,7 +75,7 @@ export const Section5Content = styled.div`
         font-size: 0.9rem;
         font-weight: 500;
         color: var(--azulprimaria);
-        padding: 8px 3px;
+        padding: 10px 3px;
 
         &::before {
           content: "";
@@ -96,10 +97,13 @@ export const Section5Content = styled.div`
         li {
           list-style: none;
           font-family: "Poppins";
-          font-size: 0.9rem;
+          font-size: 0.85rem;
           font-weight: 500;
           color: var(--azulprimaria);
           padding: 3px;
+          margin-left: 8px;
+          padding-left: 0;
+          list-style-image: url(${poligonoVerdeImg});
         }
       }
     }
@@ -148,6 +152,41 @@ export const Section5Content = styled.div`
 
         &:hover {
           background-color: #51a84e;
+        }
+      }
+    }
+    @media (max-width: 700px) {
+      flex-direction: column;
+      margin: 1rem;
+      .box1,
+      .box2,
+      .box3 {
+        width: 100%;
+        display: block;
+        text-align: center;
+        border-width: 0;
+        padding: 1rem;
+      }
+      .box1 {
+      }
+      .box2 {
+        border-top-width: 2px;
+        border-top-color: #e6e6e6;
+        border-bottom-width: 2px;
+        border-bottom-color: #e6e6e6;
+        text-align: left;
+        padding: 1.5rem 0.5rem;
+
+        span {
+          border: none;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+      }
+      .box3 {
+        .preco {
+          justify-content: center;
+          padding: 2rem;
         }
       }
     }

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import efeitoCirculosSuperior from "../../../../assets/efeito-circulos-horizontal.svg";
 
 export const TopContainer = styled.div`
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,10 +29,10 @@ export const TopContainer = styled.div`
       border-radius: 5px;
     }
     .list {
-      font-family:'UniNeue';
+      font-family: "UniNeue";
       position: absolute;
       top: 55px;
-      right:0;
+      right: 0;
       color: var(--azulprimaria);
       padding: 20px;
       font-weight: 600;
@@ -56,11 +55,30 @@ export const TopContainer = styled.div`
       }
     }
   }
-}
-@media (max-width: 700px) {
-  .top {
+  @media (max-width: 700px) {
+    flex-direction: column;
+    justify-content: center;
+    background: none;
+    margin: 0;
     h1 {
-      width: 90%;
+      margin-bottom: 2rem;
+    }
+    .top {
+      h1 {
+        width: 90%;
+      }
+    }
+    .select {
+      align-self: flex-start;
+      margin: 0 2rem;
+      .list {
+        top: 4rem;
+        left: 0;
+        z-index: 3;
+        ul li {
+          padding: 1rem;
+        }
+      }
     }
   }
 `;

@@ -2,7 +2,7 @@ import { Section3Container, Section3Content } from "./styles";
 import iconeDownloadImg from "../../../assets/icone-download.svg";
 import iconeStreamingImg from "../../../assets/icone-play.svg";
 import iconeConexaoImg from "../../../assets/icone-conexao.svg";
-import iconeLatenciaImg from "../../../assets/icone-latencia.svg";
+import iconeLatenciaImg from "../../../assets/icone-latencia.png";
 import iconeWifiImg from "../../../assets/icone-wifi.svg";
 
 export default function Section3() {
