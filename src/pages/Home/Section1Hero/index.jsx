@@ -28,7 +28,6 @@ export default function Section1Hero() {
         <MotionButton
           bg="var(--acessibilidade)"
           _hover={{ bg: "#51A84E" }}
-          whileTap={{ scale: 0.975 }}
           _active={{ bg: "#51A84E" }}
           w={295}
           h={54}

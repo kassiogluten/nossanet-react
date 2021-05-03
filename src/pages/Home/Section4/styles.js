@@ -33,6 +33,7 @@ export const Section4Content = styled.div`
     max-width: 600px;
     align-self: center;
     justify-self: center;
+    padding: 1rem;
 
     p {
       font-family: "Poppins";
@@ -62,7 +63,7 @@ export const Section4Content = styled.div`
   @media (max-width: 700px) {
     width: 100%;
     flex-direction: column;
-    height: 317px;
+    height: 357px;
     justify-content: center;
 
     .box1 {
@@ -70,7 +71,7 @@ export const Section4Content = styled.div`
       justify-self: center;
     }
     .box2 {
-      height: 317px;
+      height: 100%;
     }
   }
 `;

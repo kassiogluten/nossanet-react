@@ -93,7 +93,6 @@ export default function Section2() {
             <Button
               bg="#fff"
               color="#081150"
-              whileTap={{ scale: 0.975 }}
               w={295}
               h={54}
               rightIcon={<FiArrowRight size={20} />}
