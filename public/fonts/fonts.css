@@ -11,7 +11,7 @@
   font-weight: 600;
 }
 @font-face {
-  font-family: "UniNeueBold";
+  font-family: "UniNeue";
   src: url("UniNeueBold.ttf") format("truetype"),
     url("UniNeueBold.otf") format("otf");
   font-weight: 700;

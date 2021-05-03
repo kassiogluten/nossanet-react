@@ -20,7 +20,7 @@ export const Section5Content = styled.div`
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
-  border: 1px solid red;
+  transition: all 1s ease;
 
   .plano {
     display: flex;
@@ -34,8 +34,8 @@ export const Section5Content = styled.div`
     border-radius: 15px;
 
     .box1 {
-      padding: 2rem 1rem;
-      width: 20%;
+      padding: 2rem 0.8rem;
+      width: 22%;
       p {
         font-size: 1.1rem;
         font-weight: 700;
@@ -106,7 +106,7 @@ export const Section5Content = styled.div`
     .box3 {
       display: flex;
       padding: 2rem 1rem;
-      width: 36%;
+      width: 40%;
       justify-content: space-between;
 
       .preco {
@@ -122,6 +122,7 @@ export const Section5Content = styled.div`
           font-weight: 900;
           color: var(--acessibilidade);
           line-height: 100%;
+          margin-left: 5px;
         }
         span:nth-child(3) {
           font-size: 1.7rem;
@@ -137,10 +138,17 @@ export const Section5Content = styled.div`
       }
       button {
         color: var(--branco);
+        font-size: 0.9rem;
+        font-weight: 700;
         width: 165px;
         height: 50px;
         background-color: var(--acessibilidade);
         border-radius: 5px;
+        transition: background-color 300ms ease;
+
+        &:hover {
+          background-color: #51a84e;
+        }
       }
     }
   }

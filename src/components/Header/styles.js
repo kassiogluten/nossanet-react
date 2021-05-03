@@ -23,7 +23,7 @@ export const HeaderContent = styled.div`
     button {
       color: var(--branco);
       font-size: 1.15rem;
-      font-weight: 600;
+      font-weight: 700;
       background-color: var(--acessibilidade);
       width: 169px;
       height: 44px;
@@ -48,7 +48,7 @@ export const HeaderContent = styled.div`
     li {
       margin-left: 0.5rem;
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 700;
       padding: 0.5rem;
       list-style: none;
       transition: border 500ms ease;
