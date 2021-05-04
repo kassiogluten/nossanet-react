@@ -27,7 +27,7 @@ export const Section7Content = styled.div`
       font-size: 2.25rem;
       font-weight: 800;
       width: 80%;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     p {
       display: flex;

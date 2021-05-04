@@ -15,9 +15,19 @@ export const Section4Container = styled.section`
     left: calc(-960px + 50vw);
   }
 
+  .divider {
+    position: absolute;
+    //top: -50px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+
   @media (max-width: 700px) {
     width: 100%;
     flex-direction: column;
+    .divider {
+      transform: scale(0.7) translate(-75%, -75%);
+    }
   }
 `;
 
