@@ -38,30 +38,47 @@ export const Section8Content = styled.div`
   margin: 80px auto;
   width: 1200px;
 
+  svg {
+    display: inline;
+    margin: 5px;
+  }
+
   .box1 {
     width: 488px;
-    height: 747px;
     background: #ffffff;
     box-shadow: 0px 0px 118px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 2rem;
+    color: var(--azul);
+    padding: 30px;
+    z-index: 3;
 
-    p {
-      font-family: "Poppins";
-      font-weight: 400;
+    h1 {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--azulprimaria);
+      border-bottom: 1px solid #f1f1f1;
+      padding: 0.8rem;
+    }
+    label,
+    input,
+    textarea,
+    select {
+      font-weight: 700;
       font-size: 0.9rem;
     }
-    h1 {
-      font-weight: 800;
-      font-size: 2.25rem;
-      width: 90%;
-      margin: 10px 0 40px;
+    label {
+      margin-top: 15px;
+      color: var(--azulprimaria);
     }
     button {
+      color: white;
+      font-size: 0.9rem;
       font-weight: 700;
-      font-size: 1.125rem;
-      position: relative;
-      max-width: 90%;
+      background: var(--azulprimaria);
+      &:hover {
+        background: #002c4a;
+      }
     }
   }
 
@@ -113,7 +130,13 @@ export const Section8Content = styled.div`
       align-self: center;
       justify-self: center;
       width: 90%;
-      margin: 5rem;
+      svg {
+        display: inline;
+        margin: 5px 0;
+      }
+      h1 {
+        padding: 0;
+      }
     }
     .box2 {
       width: 90%;

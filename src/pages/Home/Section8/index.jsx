@@ -2,8 +2,10 @@ import { Section8Container, Section8Content } from "./styles";
 
 import efeitoPatternImg from "../../../assets/efeito-pattern.svg";
 import dividerImg from "../../../assets/divisor-circular.svg";
+import { FaWhatsapp} from "react-icons/fa";
+import { FiMail, FiPhone, FiMapPin, FiMessageSquare} from "react-icons/fi";
 import { Button } from "@chakra-ui/button";
-import { FaWhatsapp } from "react-icons/fa";
+import FormHome from './FormHome'
 
 export default function Section8() {
   return (
@@ -15,8 +17,8 @@ export default function Section8() {
 
       <Section8Content>
         <div className="box1">
-          <p>O MELHOR PLANO PARA VOCÊ</p>
-          <h1>Ajudamos você a escolher o melhor plano.</h1>
+          <h1><FiMessageSquare size={30} color="var(--acessibilidade)" /> Se preferir, envie pelo formulário</h1>
+          <FormHome/>
         </div>
 
         <div className="box2">
@@ -33,9 +35,9 @@ export default function Section8() {
               Converse pelo WhatsApp
             </Button>
           </div>
-          <li>contato@nossanettelecom.net.br</li>
-          <li>(31) 3320-1995</li>
-          <li>Av. José Rodrigues de Almeida, 190, Ipaba - MG, 35198-000</li>
+          <li><FiMail size={20} /> contato@nossanettelecom.net.br</li>
+          <li><FiPhone size={20} />(31) 3320-1995</li>
+          <li><FiMapPin size={20} />Av. José Rodrigues de Almeida, 190, Ipaba - MG, 35198-000</li>
         </div>
       </Section8Content>
     </Section8Container>

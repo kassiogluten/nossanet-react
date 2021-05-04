@@ -115,7 +115,7 @@ export const Content = styled(motion.div)`
 
     @media (max-width: 700px) {
       width: 100%;
-      padding: 40px 20px;
+      padding: 40px 10px 20px 20px;
       height: 246px;
 
       h1 {
