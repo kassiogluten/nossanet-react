@@ -21,7 +21,7 @@ export const Section8Container = styled.section`
     left: 50%;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     width: 100%;
     flex-direction: column;
     .divider {
@@ -121,7 +121,7 @@ export const Section8Content = styled.div`
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     width: 100%;
     flex-direction: column-reverse;
     justify-content: center;

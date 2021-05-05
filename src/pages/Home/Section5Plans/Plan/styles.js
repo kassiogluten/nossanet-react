@@ -142,7 +142,7 @@ export const PlanDiv = styled.section`
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       flex-direction: column;
       margin: 1rem;
       .box1,
