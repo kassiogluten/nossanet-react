@@ -98,16 +98,33 @@ export const Content = styled.div`
       }
     }
 
+    .col2 a:hover svg {
+      animation: setas 1s alternate infinite;
+    }
+    .col4 a:hover svg {
+      animation: coracao 1s infinite;
+    }
+
     a {
       display: block;
     }
   }
+
   @media (max-width: 700px) {
     .logo {
       display: none;
     }
     .links {
       width: 100%;
+
+      .col4 {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .links {
       .col1,
       .col2 {
         width: 50%;
@@ -126,10 +143,26 @@ export const Content = styled.div`
           }
         }
       }
-      .col4 {
-        flex-direction: column;
-        text-align: center;
-      }
+    }
+  }
+
+  @keyframes setas {
+    to {
+      transform: translate(5px, -5px);
+    }
+  }
+  @keyframes coracao {
+    0%,
+    20%,
+    40%,
+    60% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.13);
+    }
+    45% {
+      transform: scale(1.18);
     }
   }
 `;

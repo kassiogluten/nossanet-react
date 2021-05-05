@@ -14,7 +14,7 @@ export function Plan({ planos, selectedCity }) {
               scale: 1,
               top: 0,
               opacity: 1,
-              transition: { duration: 0.3, delay: 0.3 + index / 15 },
+              transition: { duration: 0.3, delay: 0.1 + index / 15 },
             }}
             //exit={{ opacity: 0, transition: { duration: 0.3 } }}
             className="plano"

@@ -34,10 +34,12 @@ export const Section1HeroContent = styled.div`
     margin-top: 210px;
     line-height: 110%;
 
+    @media (max-width: 900px) {
+      width: 400px;
+    }
     @media (max-width: 700px) {
       width: 90vw;
       font-size: 2.5rem;
-      // margin-top: 175px;
     }
 
     span {
@@ -51,7 +53,7 @@ export const Section1HeroContent = styled.div`
     max-width: 90%;
 
     @media (max-width: 700px) {
-      margin: 40px 0;
+      margin: 40px 0 70px;
     }
   }
 `;

@@ -1,5 +1,5 @@
 export default function Empresarial(){
     return (
-        <h1>Empresarial</h1>
+        <h1 style={{paddingTop:"200px"}}>Empresarial</h1>
     )
 }

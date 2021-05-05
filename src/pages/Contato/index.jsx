@@ -1,5 +1,5 @@
 export default function Contato(){
     return (
-        <h1>Contato</h1>
+        <h1 style={{paddingTop:"200px"}}>Contato</h1>
     )
 }

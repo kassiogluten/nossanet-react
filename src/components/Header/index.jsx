@@ -49,11 +49,11 @@ export default function Header() {
 
           <Button leftIcon={<FiUser size={20} />}>Minha conta</Button>
         </div>
-        <Modal bg="teal" isOpen={isOpen} onClose={onClose} isCentered size="full">
+        <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
           <ModalOverlay />
-          <ModalContent bg="teal">
+          <ModalContent onClick={onClose} color="white" bg="var(--azul)">
             <ModalCloseButton />
-            <ModalBody bg="teal">
+            <ModalBody>
               <h1>Menu Mobile</h1>
               <h1>Menu Mobile</h1>
               <h1>Menu Mobile</h1>
