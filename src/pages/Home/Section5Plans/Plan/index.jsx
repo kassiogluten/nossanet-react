@@ -49,7 +49,7 @@ export function Plan({ planos, selectedCity }) {
                 <span>,90</span>
                 <span>por mês</span>
               </div>
-              <button type="button">Quero esse</button>
+              <button disabled type="button">Quero esse</button>
             </div>
           </motion.div>
         ))}

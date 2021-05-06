@@ -90,15 +90,17 @@ export default function Section2() {
               <li>TRABALHE</li>
             </ul>
             <h1>Internet 100% Fibra Optica.</h1>
-            <Button
-              bg="#fff"
-              color="#081150"
-              w={295}
-              h={54}
-              rightIcon={<FiArrowRight size={20} />}
-            >
-              Contrate agora
-            </Button>
+            <a href="#planos">
+              <Button
+                bg="#fff"
+                color="#081150"
+                w={295}
+                h={54}
+                rightIcon={<FiArrowRight size={20} />}
+              >
+                Contrate agora
+              </Button>
+            </a>
           </div>
           <div className="box2">
             <img src={box2Img} alt="NossaNet" />

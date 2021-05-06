@@ -30,7 +30,7 @@ export default function FormHome() {
       <FormLabel htmlFor="mensagem">Mensagem</FormLabel>
       <Textarea h="150" placeholder="Digite sua mensagem" id="mensagem" />
 
-      <Button mt="4" h="49" w="full">Enviar</Button>
+      <Button disabled mt="4" h="49" w="full">Enviar</Button>
     </FormControl>
   );
 }

@@ -10,7 +10,7 @@ import efeitoCirculosImg from "../../assets/efeito-circulos-rodape.svg";
 export default function Footer() {
   return (
     <Container>
-       <div className="circulos">
+      <div className="circulos">
         <img src={efeitoCirculosImg} alt="Circulos" />
       </div>
       <Content>
@@ -21,23 +21,27 @@ export default function Footer() {
           <div className="col1">
             <h3>NossaNet</h3>
             <div className="line"></div>
-            <a href="#a">Início</a>
-            <a href="#a">Sobre nós</a>
+            <Link to="/">
+              <p>Início</p>
+            </Link>
+            <Link to="/sobre-nos">
+              <p>Sobre nós</p>
+            </Link>
             <Link to="/contato">Fale conosco</Link>
             <Link to="/vagas">Trabalhe conosco</Link>
           </div>
           <div className="col2">
             <h3>Para você</h3>
             <div className="line"></div>
-            <a href="#a">
+            <a target="blank" href="https://central.nossanettelecom.net.br/">
               Central do cliente <FiArrowUpRight size="20px" />
             </a>
-            <a href="#a">Nossos planos</a>
-            <a href="#a">
+            <a href="#planos">Nossos planos</a>
+            <a target="blank" href="https://central.nossanettelecom.net.br/">
               2ª via de faturas <FiArrowUpRight size="20px" />
             </a>
-            <a href="#a">Atendimento ao cliente</a>
-            <a href="#a">Dúvidas frequentes</a>
+            <a href="#faleconosco">Atendimento ao cliente</a>
+            <a href="#faq">Dúvidas frequentes</a>
           </div>
           <div className="col3">
             <h3>Atendimento</h3>

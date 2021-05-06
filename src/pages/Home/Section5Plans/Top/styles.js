@@ -40,6 +40,7 @@ export const TopContainer = styled.div`
       width: 300px;
       border-radius: 5px;
       box-shadow: 0px 0px 63px rgba(0, 0, 0, 0.24);
+      z-index: 3;
       ul {
         list-style: none;
         li {
@@ -74,7 +75,7 @@ export const TopContainer = styled.div`
       .list {
         top: 4rem;
         left: 0;
-        z-index: 3;
+
         ul li {
           padding: 1rem;
         }

@@ -47,7 +47,7 @@ export default function Header() {
             <FiMenu size={30} onClick={onOpen} />
           </ul>
 
-          <Button leftIcon={<FiUser size={20} />}>Minha conta</Button>
+          <a href="https://central.nossanettelecom.net.br/"><Button leftIcon={<FiUser size={20} />}>Minha conta</Button></a>
         </div>
         <Modal isOpen={isOpen} onClose={onClose} isCentered size="full">
           <ModalOverlay />

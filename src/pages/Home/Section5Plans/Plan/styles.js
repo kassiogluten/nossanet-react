@@ -6,6 +6,7 @@ import poligonoVerdeImg from "../../../../assets/poligono-verde.svg";
 
 export const PlanDiv = styled.section`
   .plano {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,6 +19,23 @@ export const PlanDiv = styled.section`
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      border: 5px solid ${"var(--acessibilidade)"};
+      &:before {
+        content: "Mais popular";
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 40%;
+        left: -68px;
+        color: white;
+        background: ${"var(--acessibilidade)"};
+        padding: 7px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
     }
 
     .box1 {
@@ -145,6 +163,17 @@ export const PlanDiv = styled.section`
     @media (max-width: 800px) {
       flex-direction: column;
       margin: 1rem;
+      &:nth-child(2) {
+        border: 5px solid ${"var(--acessibilidade)"};
+        margin-top: 50px;
+        &:before {
+          content: "Mais popular";
+          transform: rotate(0deg);
+          position: absolute;
+          top: -35px;
+          left: 45%;
+        }
+      }
       .box1,
       .box2,
       .box3 {

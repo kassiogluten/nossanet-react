@@ -25,17 +25,19 @@ export default function Section1Hero() {
           conexão para momentos{" "}
           <motion.span variants={variantsItems}>especiais</motion.span>.
         </motion.h1>
-        <MotionButton
-          bg="var(--acessibilidade)"
-          _hover={{ bg: "#51A84E" }}
-          _active={{ bg: "#51A84E" }}
-          w={295}
-          h={54}
-          rightIcon={<FiArrowRight size={20} />}
-          variants={variantsItems}
-        >
-          Contrate agora
-        </MotionButton>
+        <a href="#planos">
+          <MotionButton
+            bg="var(--acessibilidade)"
+            _hover={{ bg: "#51A84E" }}
+            _active={{ bg: "#51A84E" }}
+            w={295}
+            h={54}
+            rightIcon={<FiArrowRight size={20} />}
+            variants={variantsItems}
+          >
+            Contrate agora
+          </MotionButton>
+        </a>
       </Section1HeroContent>
     </MotionSection1HeroContainer>
   );

@@ -18,7 +18,7 @@ export default function Section4() {
         <div className="box1">
           <p>O MELHOR PLANO PARA VOCÊ</p>
           <h1>Ajudamos você a escolher o melhor plano.</h1>
-          <Button
+          <Button disabled
             bg="#fff"
             color="#081150"
             w={295}
