@@ -6,7 +6,9 @@ import { useState } from "react";
 import { cidades } from "../../components/cities";
 import { planos } from "../../components/planos";
 
-export function Pag({ pag, setCity, city }) {
+import './modalPages.css'
+
+export function Pages({ pag, setCity, city }) {
   let [pessoas, setPessoas] = useState(0);
   let [jogaOnline, setJogaOnline] = useState(0);
   let [usaTrabalho, setUsaTrabalho] = useState(0);
@@ -28,31 +30,27 @@ export function Pag({ pag, setCity, city }) {
         <ModalBody>
           Qual sua cidade ?
           <RadioGroup defaultValue={city} onChange={setCity} value={city}>
-            <HStack>
-              {cidades.map((cidade) => (
-                <Radio key={cidade} value={cidade}>
-                  {cidade}
-                </Radio>
-              ))}
-            </HStack>
+            {cidades.map((cidade) => (
+              <Radio key={cidade} value={cidade}>
+                {cidade}
+              </Radio>
+            ))}
           </RadioGroup>
           Quantas pessoas moram na casa ?
-          <RadioGroup
+          <RadioGroup 
             defaultValue={pessoas}
             onChange={setPessoas}
             value={pessoas}
           >
-            <HStack>
               <Radio value="1">1</Radio>
               <Radio value="2">2</Radio>
               <Radio value="3">3</Radio>
               <Radio value="4">4</Radio>
               <Radio value="5">5</Radio>
               <Radio value="6">6</Radio>
-            </HStack>
           </RadioGroup>
           Alguém tem o hábito de jogar online?
-          <RadioGroup
+          <RadioGroup 
             defaultValue={jogaOnline}
             onChange={setJogaOnline}
             value={jogaOnline}
@@ -63,7 +61,7 @@ export function Pag({ pag, setCity, city }) {
             </HStack>
           </RadioGroup>
           Alguém usa a internet para trabalhar?
-          <RadioGroup
+          <RadioGroup 
             defaultValue={usaTrabalho}
             onChange={setUsaTrabalho}
             value={usaTrabalho}
@@ -83,21 +81,19 @@ export function Pag({ pag, setCity, city }) {
         <ModalBody>
           Quantos dispositivos serão conectados? (Celular, SmartTV,
           Computadores...)
-          <RadioGroup
+          <RadioGroup 
             defaultValue={dispositivos}
             onChange={setDispositivos}
             value={dispositivos}
           >
-            <HStack>
               <Radio value="1">1 à 3</Radio>
               <Radio value="2">4 ou 5 </Radio>
               <Radio value="3">6 ou 7</Radio>
               <Radio value="4">8+</Radio>
-            </HStack>
           </RadioGroup>
           Utiliza serviços de streaming de filmes e séries? (Netflix, Amazom,
           Globoplay, Telecine...)
-          <RadioGroup
+          <RadioGroup 
             defaultValue={streaming}
             onChange={setStreaming}
             value={streaming}
@@ -108,7 +104,7 @@ export function Pag({ pag, setCity, city }) {
             </HStack>
           </RadioGroup>
           Alguém utiliza para estudar? (escola, faculdade...)
-          <RadioGroup
+          <RadioGroup 
             defaultValue={estudar}
             onChange={setEstudar}
             value={estudar}
@@ -126,9 +122,25 @@ export function Pag({ pag, setCity, city }) {
     return (
       <>
         <ModalBody>
-          <h1>pontuacao: {pontuacao}</h1>
+          {/* =IFS(   30; "30 Mega";    60; "50 Mega";   80; "100 Mega";    90; "200 Mega";   89; "300 Mega") */}
           {planos
-            .filter((plano) => plano.cidade === city)
+            .filter(
+              (plano) =>
+                plano.cidade === city &&
+                (plano.tipo === "fibra"
+                  ? pontuacao < 4
+                    ? plano.plano === 30
+                    : pontuacao < 7
+                    ? plano.plano === 100
+                    : pontuacao < 10
+                    ? plano.plano === 200
+                    : plano.plano === 300
+                  : pontuacao < 4
+                  ? plano.plano === 3
+                  : pontuacao < 6 && pontuacao > 3
+                  ? plano.plano === 5
+                  : plano.plano === 7)
+            )
             .map((plano) => (
               <li>
                 {plano.cidade} / {plano.plano}
@@ -143,6 +155,7 @@ export function Pag({ pag, setCity, city }) {
       <>
         <ModalBody>
           <h1>formulario dados pessoais</h1>
+          <h1>Cidade selecionada: {city}</h1>
         </ModalBody>
       </>
     );

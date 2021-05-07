@@ -2,8 +2,8 @@ import { TopContainer } from "./styles";
 import iconeSelectImg from "../../../../assets/icone-select.svg";
 
 export function Top({
-  selectedCity,
-  setSelectedCity,
+  city,
+  setCity,
   cidades,
   toggleSelect,
   isSelectOpen,
@@ -14,7 +14,7 @@ export function Top({
       <h1>Vamos escolher um plano para você?</h1>
       <div className="select">
         <button type="button" onClick={toggleSelect}>
-          <span>{selectedCity}</span>
+          <span>{city}</span>
           <img src={iconeSelectImg} alt="Selecione a cidade" />
         </button>
         {isSelectOpen && (
@@ -24,7 +24,7 @@ export function Top({
                 <li
                   key={index}
                   onClick={() => {
-                    setSelectedCity(cidade);
+                    setCity(cidade);
                     setIsSelectOpen(false);
                   }}
                 >

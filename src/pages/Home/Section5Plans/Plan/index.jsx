@@ -1,11 +1,20 @@
 import { motion } from "framer-motion";
 import { PlanDiv } from "./styles";
 
-export function Plan({ planos, selectedCity }) {
+export function Plan({
+  planos,
+  pag,
+  setPag,
+  onOpen,
+  myPlan,
+  setMyPlan,
+  city,
+  setCity,
+}) {
   return (
     <PlanDiv>
       {planos
-        .filter((plano) => plano.cidade === selectedCity)
+        .filter((plano) => plano.cidade === city)
         .map((plano, index) => (
           <motion.div
             exitBeforeEnter
@@ -49,7 +58,15 @@ export function Plan({ planos, selectedCity }) {
                 <span>,90</span>
                 <span>por mês</span>
               </div>
-              <button disabled type="button">Quero esse</button>
+              <button
+                onClick={() => {
+                  setPag(4);
+                  onOpen();
+                }}
+                type="button"
+              >
+                Quero esse
+              </button>
             </div>
           </motion.div>
         ))}

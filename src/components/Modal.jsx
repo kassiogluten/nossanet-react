@@ -1,0 +1,150 @@
+import { Button } from "@chakra-ui/button";
+import {
+  Modal,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+} from "@chakra-ui/modal";
+import { FiArrowRight, FiCheck, FiRepeat } from "react-icons/fi";
+
+export default function ModalTest({
+  pag,
+  prevPag,
+  proxPag,
+  onClose,
+  isOpen,
+  progress,
+  Pages,
+  city,
+  setCity,
+  formLoading,
+  handleForm,
+  setPag,
+}) {
+  return (
+    <Modal size="2xl" onClose={onClose} isOpen={isOpen} isCentered>
+      <ModalOverlay />
+      <ModalContent mx={5}>
+        <ModalHeader
+          className="modalHeader"
+          color="white"
+          borderTopRadius="5px"
+          bg="var(--acessibilidade)"
+        >
+          {pag === 2
+            ? "Vamos escolher o plano ideial para você"
+            : pag === 3
+            ? "Pronto! Este é seu plano ideial "
+            : pag === 4
+            ? "Parabéns! Agora falta pouco."
+            : pag === 5
+            ? "Endereço da instalação"
+            : pag === 6
+            ? "Revise as informações"
+            : pag === 7
+            ? "Informações enviadas"
+            : "Vamos escolher o plano ideial para você"}
+          <div
+            className={
+              pag === 2
+                ? "pag2"
+                : pag === 3
+                ? "pag3"
+                : pag === 5
+                ? "pag2"
+                : pag === 6
+                ? "pag3"
+                : pag === 7
+                ? "pag3"
+                : "pag1"
+            }
+          >
+            <div>{progress}</div>
+          </div>
+        </ModalHeader>
+        <ModalCloseButton
+          mt="-25px"
+          _hover={{ color: "#51a84e" }}
+          color="var(--azul)"
+          bg="white"
+        />
+        <Pages city={city} setCity={setCity} pag={pag} />
+        <ModalFooter>
+          {pag > 1 && (
+            <Button
+              color="#BFBFBF"
+              variant="ghost"
+              mr="10px"
+              onClick={prevPag}
+            >
+              Anterior
+            </Button>
+          )}
+          {pag < 6 && (
+            <Button
+              className="avancar"
+              rightIcon={<FiArrowRight size="18" />}
+              fontWeight={800}
+              w="242px"
+              h="54px"
+              _hover={{ bg: "#51a84e" }}
+              color="white"
+              bg="var(--acessibilidade)"
+              onClick={proxPag}
+            >
+              Avançar
+            </Button>
+          )}
+          {pag === 6 && (
+            <Button
+              loadingText="Enviando"
+              isLoading={formLoading}
+              className="avancar"
+              rightIcon={<FiArrowRight size="18" />}
+              fontWeight={800}
+              w="242px"
+              h="54px"
+              _hover={{ bg: "#51a84e" }}
+              color="white"
+              bg="var(--acessibilidade)"
+              onClick={handleForm}
+            >
+              Enviar
+            </Button>
+          )}
+          {pag > 6 && (
+            <div>
+              <Button
+                rightIcon={<FiRepeat />}
+                fontWeight={800}
+                w="150px"
+                h="54px"
+                _hover={{ bg: "#51a84e" }}
+                color="white"
+                bg="var(--acessibilidade)"
+                onClick={() => setPag(1)}
+              >
+                Recomeçar
+              </Button>
+              <Button
+                m="5px"
+                rightIcon={<FiCheck />}
+                fontWeight={800}
+                w="150px"
+                h="54px"
+                _hover={{ bg: "#51a84e" }}
+                color="white"
+                bg="blackAlpha.500"
+                onClick={onClose}
+              >
+                Finalizar
+              </Button>
+            </div>
+          )}
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
+  );
+}

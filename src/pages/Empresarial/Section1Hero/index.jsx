@@ -3,9 +3,19 @@ import { Button } from "@chakra-ui/react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-const MotionButton = motion(Button);
 const MotionSection1HeroContainer = motion(Section1HeroContainer);
 
+const variants = {
+  hidden: { opacity: 1},
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: .5,
+      delayChildren: .5,
+      duration: 1,
+    },
+  },
+};
 const variantsItems = {
   hidden: { opacity: 0, x: -20 },
   show: {
@@ -19,27 +29,26 @@ const variantsItems = {
 
 export default function Section1Hero() {
   return (
-    <MotionSection1HeroContainer initial="hidden" animate="show">
+    <MotionSection1HeroContainer variants={variants} initial="hidden" animate="show">
       <Section1HeroContent>
         <motion.h1 variants={variantsItems}>
-        Conexão ideial para o{" "}
-crescimento da sua{" "}
-
-          <motion.span variants={variantsItems}>empresa</motion.span>.
+          conexão para momentos{" "}
+          <motion.span variants={variantsItems}>especiais</motion.span>.
         </motion.h1>
-        <a href="#planos">
-          <MotionButton
+        <motion.a variants={variantsItems} href="#planos">
+          <Button
+            initial="hidden"
+            animate="show"
             bg="var(--acessibilidade)"
             _hover={{ bg: "#51A84E" }}
             _active={{ bg: "#51A84E" }}
             w={295}
             h={54}
             rightIcon={<FiArrowRight size={20} />}
-            variants={variantsItems}
           >
             Contrate agora
-          </MotionButton>
-        </a>
+          </Button>
+        </motion.a>
       </Section1HeroContent>
     </MotionSection1HeroContainer>
   );

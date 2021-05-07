@@ -12,7 +12,6 @@ export default function Section4() {
       <img className="divider" src={dividerImg} alt="Divisor" />
 
       <Section4Content>
-        {/* <img src={efeitoCirculosImg} alt="Circulos" /> */}
         <div className="box1">
           <p>O MELHOR PLANO PARA SUA EMPRESA</p>
           <h1>Tenha mais vantagens para o seu negócio.</h1>

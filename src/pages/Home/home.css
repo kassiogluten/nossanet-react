@@ -11,10 +11,11 @@
   transition: all 1s;
 }
 
-#chakra-modal-12{
+section.chakra-modal__content{
   border-radius: 10px;
 }
-.chakra-modal__content header {
+
+section.chakra-modal__content header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +25,7 @@
   border-top-right-radius: 10px;
   
 }
-.chakra-modal__content header div {
+section.chakra-modal__content header div {
   margin-right: 15px;
 }
 
@@ -36,10 +37,13 @@ footer.chakra-modal__footer {
 }
 
 @media (max-width:600px){
-  header {
+  section.chakra-modal__content {
+    margin-right: 2rem;
+  }
+  section.chakra-modal__content header {
     display: block;
   }
-  header div {
+  section.chakra-modal__content header div {
     margin-top: 10px;
   }
   footer.chakra-modal__footer {

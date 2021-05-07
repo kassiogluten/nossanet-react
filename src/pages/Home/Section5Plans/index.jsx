@@ -4,181 +4,18 @@ import { useState } from "react";
 import { Top } from "./Top";
 import { Plan } from "./Plan";
 
-export default function Section5() {
-  const cidades = [
-    "Ipaba, MG",
-    "Periquito, MG",
-    "Naque, MG",
-    "Perpétuo Socorro, MG",
-    "Belo Oriente, MG",
-    "Vale Verde, MG",
-    "Boachá, MG",
-  ];
+import { cidades } from "../../../components/cities";
+import { planos } from "../../../components/planos";
 
-  const planos = [
-    {
-      tipo: "fibra",
-      plano: 30,
-      valor: "79",
-      cidade: "Ipaba, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "fibra",
-      plano: 100,
-      valor: "99",
-      cidade: "Ipaba, MG",
-      qualifica: true,
-    },
-    {
-      tipo: "fibra",
-      plano: 200,
-      valor: "129",
-      cidade: "Ipaba, MG",
-      qualifica: true,
-    },
-    {
-      tipo: "fibra",
-      plano: 300,
-      valor: "149",
-      cidade: "Ipaba, MG",
-      qualifica: true,
-    },
-    {
-      tipo: "fibra",
-      plano: 30,
-      valor: "79",
-      cidade: "Periquito, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "fibra",
-      plano: 100,
-      valor: "99",
-      cidade: "Periquito, MG",
-      qualifica: true,
-    },
-    {
-      tipo: "fibra",
-      plano: 200,
-      valor: "129",
-      cidade: "Periquito, MG",
-      qualifica: true,
-    },
-    {
-      tipo: "fibra",
-      plano: 300,
-      valor: "149",
-      cidade: "Periquito, MG",
-      qualifica: true,
-    },
-    {
-      tipo: "rádio",
-      plano: 3,
-      valor: "59",
-      cidade: "Naque, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 5,
-      valor: "79",
-      cidade: "Naque, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 7,
-      valor: "99",
-      cidade: "Naque, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 3,
-      valor: "59",
-      cidade: "Perpétuo Socorro, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 5,
-      valor: "79",
-      cidade: "Perpétuo Socorro, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 7,
-      valor: "99",
-      cidade: "Perpétuo Socorro, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 3,
-      valor: "59",
-      cidade: "Belo Oriente, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 5,
-      valor: "79",
-      cidade: "Belo Oriente, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 7,
-      valor: "99",
-      cidade: "Belo Oriente, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 3,
-      valor: "59",
-      cidade: "Vale Verde, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 5,
-      valor: "79",
-      cidade: "Vale Verde, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 7,
-      valor: "99",
-      cidade: "Vale Verde, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 3,
-      valor: "59",
-      cidade: "Boachá, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 5,
-      valor: "79",
-      cidade: "Boachá, MG",
-      qualifica: false,
-    },
-    {
-      tipo: "rádio",
-      plano: 7,
-      valor: "99",
-      cidade: "Boachá, MG",
-      qualifica: false,
-    },
-  ];
-
+export default function Section5({
+  pag,
+  setPag,
+  onOpen,
+  myPlan,
+  setMyPlan,
+  city,
+  setCity,
+}) {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState(cidades[0]);
 
@@ -190,6 +27,8 @@ export default function Section5() {
     <Section5Container id="planos">
       <Section5Content>
         <Top
+          city={city}
+          setCity={setCity}
           isSelectOpen={isSelectOpen}
           selectedCity={selectedCity}
           setSelectedCity={setSelectedCity}
@@ -197,7 +36,16 @@ export default function Section5() {
           toggleSelect={toggleSelect}
           setIsSelectOpen={setIsSelectOpen}
         />
-        <Plan planos={planos} selectedCity={selectedCity} />
+        <Plan
+          myPlan={myPlan}
+          setMyPlan={setMyPlan}
+          city={city}
+          setCity={setCity}
+          pag={pag}
+          setPag={setPag}
+          onOpen={onOpen}
+          planos={planos}
+        />
       </Section5Content>
     </Section5Container>
   );
