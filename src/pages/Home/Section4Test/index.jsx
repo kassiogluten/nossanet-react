@@ -5,7 +5,7 @@ import dividerImg from "../../../assets/divisor-circular.svg";
 import { Button } from "@chakra-ui/button";
 import { FiArrowRight } from "react-icons/fi";
 
-export default function Section4() {
+export default function Section4({onOpen}) {
   return (
     <Section4Container>
       <div className="circulos">
@@ -18,7 +18,7 @@ export default function Section4() {
         <div className="box1">
           <p>O MELHOR PLANO PARA VOCÊ</p>
           <h1>Ajudamos você a escolher o melhor plano.</h1>
-          <Button disabled
+          <Button onClick={onOpen}
             bg="#fff"
             color="#081150"
             w={295}

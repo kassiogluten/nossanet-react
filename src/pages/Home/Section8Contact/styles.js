@@ -86,7 +86,7 @@ export const Section8Content = styled.div`
     .box2A {
       margin: 30px 0;
       padding: 40px 48px;
-      width: 547px;
+      max-width: 547px;
       height: 284px;
       background: linear-gradient(
         104.94deg,
@@ -121,7 +121,7 @@ export const Section8Content = styled.div`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     width: 100%;
     flex-direction: column-reverse;
     justify-content: center;

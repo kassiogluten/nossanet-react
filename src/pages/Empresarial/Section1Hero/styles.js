@@ -5,6 +5,7 @@ export const Section1HeroContainer = styled.main`
   padding: 0 0.75rem;
   width: 100%;
   background: url(${banner1Img}) no-repeat center top;
+  background-color: var(--azul);
   background-size: auto;
   color: var(--branco);
   @media (max-width: 1200px) {
