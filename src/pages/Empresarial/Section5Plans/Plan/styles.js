@@ -171,7 +171,8 @@ export const PlanDiv = styled.section`
           transform: rotate(0deg);
           position: absolute;
           top: -35px;
-          left: 45%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
       .box1,

@@ -8,7 +8,7 @@ export const Section1HeroContainer = styled.main`
   background-size: auto;
   color: var(--branco);
   @media (max-width: 1200px) {
-    background-position: center top;
+    background-position: 65% top;
     background-size: cover;
   }
 `;
