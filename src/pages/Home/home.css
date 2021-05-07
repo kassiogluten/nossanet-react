@@ -1,0 +1,56 @@
+
+.pag2 #bola2,
+.pag2 #linha2 {
+  fill: #f1f1f1;
+  transition: all 1s;
+}
+.pag3 #bola3,
+.pag3 #linha2,
+.pag3 #bola2 {
+  fill: #f1f1f1;
+  transition: all 1s;
+}
+
+#chakra-modal-12{
+  border-radius: 10px;
+}
+.chakra-modal__content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+.chakra-modal__content header div {
+  margin-right: 15px;
+}
+
+footer.chakra-modal__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  text-align: center;
+}
+
+@media (max-width:600px){
+  header {
+    display: block;
+  }
+  header div {
+    margin-top: 10px;
+  }
+  footer.chakra-modal__footer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+}
+
+@media (min-width:600px){
+  button.chakra-button.avancar{
+    margin-left: auto;
+  }
+}
