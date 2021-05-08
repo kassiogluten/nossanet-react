@@ -1,7 +1,6 @@
 import styled from "styled-components";
 //import { AnimatePresence } from "framer-motion";
 
-import iconeQualificaImg from "../../../../assets/icone-qualifica.png";
 import poligonoVerdeImg from "../../../../assets/poligono-verde.svg";
 
 export const PlanDiv = styled.section`
@@ -21,7 +20,7 @@ export const PlanDiv = styled.section`
       margin-bottom: 0;
     }
 
-    &:nth-child(2) {
+    &:nth-last-child(2) {
       border: 5px solid ${"var(--acessibilidade)"};
       &:before {
         content: "Mais popular";
@@ -76,38 +75,42 @@ export const PlanDiv = styled.section`
         border-bottom-width: 2px;
         border-bottom-color: #e6e6e6;
         font-family: "Poppins";
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: 500;
         color: var(--azulprimaria);
         padding: 10px 3px;
-
-        &::before {
-          content: "";
-          padding-left: 25px;
-          width: 20px;
-          height: 20px;
-          background: url(${iconeQualificaImg}) no-repeat;
-          background-size: contain;
-        }
+        text-align: center;
       }
 
       ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
-        height: 90px;
+        height: 110px;
+        max-width: 350px;
         margin-top: 10px;
-        justify-content: space-between;
+        padding-left: 8px;
         li {
+          width: 50%;
           list-style: none;
           font-family: "Poppins";
           font-size: 0.85rem;
           font-weight: 500;
           color: var(--azulprimaria);
           padding: 3px;
-          margin-left: 8px;
           padding-left: 0;
           list-style-image: url(${poligonoVerdeImg});
+        }
+      }
+      @media (max-width: 700px) {
+        ul {
+          padding: 0;
+          margin-left: 5px;
+          li {
+            font-size: 0.8rem;
+            padding: 0;
+            margin: 0;
+          }
         }
       }
     }
@@ -160,10 +163,11 @@ export const PlanDiv = styled.section`
       }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
       margin: 1rem;
-      &:nth-child(2) {
+      padding: 0.5rem;
+      &:nth-last-child(2) {
         border: 5px solid ${"var(--acessibilidade)"};
         margin-top: 50px;
         &:before {

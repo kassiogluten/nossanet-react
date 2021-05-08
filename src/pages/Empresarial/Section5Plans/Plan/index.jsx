@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { PlanDiv } from "./styles";
 
-export function Plan({ planos, selectedCity }) {
+export function Plan({ planosEmpresariais, selectedCity }) {
   return (
     <PlanDiv>
-      {planos
+      {planosEmpresariais
         .filter((plano) => plano.cidade === selectedCity)
         .map((plano, index) => (
           <motion.div
@@ -23,23 +23,22 @@ export function Plan({ planos, selectedCity }) {
             <div className="box1">
               <p>Nossanet {plano.tipo}</p>
               <h1>{plano.plano} Mega</h1>
-              {plano.tipo === "fibra" && (
-                <span>+{plano.plano <= 30 ? "20" : "100"} mega bônus</span>
-              )}
+              
             </div>
             <div className="box2">
-              {plano.qualifica && <span>Incluso Qualifica</span>}
+              {plano.tipo === 'fibra' && <span>Atendimento técnico presencial em até 4 horas</span>}
               <ul>
                 <li>
                   {plano.tipo === "fibra"
                     ? "Fibra Óptica"
                     : "Internet via rádio"}
                 </li>
-                <li>Instalação Grátis</li>
-                <li>Suporte Técnico 24h</li>
                 <li>Wi-Fi Grátis</li>
+                <li>Instalação Grátis</li>
                 <li>Download: {plano.plano} Mbps</li>
+                <li>Suporte Técnico 24h</li>
                 <li>Upload: {plano.plano} Mbps</li>
+                {plano.ipfixo && <li>Ip Fixo</li>}
               </ul>
             </div>
             <div className="box3">

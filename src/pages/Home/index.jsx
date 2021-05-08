@@ -19,12 +19,19 @@ import ModalTest from "../../components/Modal";
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  let [pag, setPag] = useState(1);
+  const [pag, setPag] = useState(1);
   const proxPag = () => setPag(pag + 1);
   const prevPag = () => setPag(pag - 1);
   const [formLoading, setFormLoading] = useState(false);
   const [city, setCity] = useState(cidades[0]);
   const [myPlan, setMyPlan] = useState(0);
+
+  const [pessoas, setPessoas] = useState(0);
+  const [jogaOnline, setJogaOnline] = useState(0);
+  const [usaTrabalho, setUsaTrabalho] = useState(0);
+  const [dispositivos, setDispositivos] = useState(0);
+  const [streaming, setStreaming] = useState(0);
+  const [estudar, setEstudar] = useState(0);
 
   function handleForm() {
     setFormLoading(true);
@@ -54,6 +61,8 @@ export default function Home() {
       <Section7 />
       <Section8 />
       <ModalTest
+        myPlan={myPlan}
+        setMyPlan={setMyPlan}
         pag={pag}
         Pages={Pages}
         setPag={setPag}
@@ -66,6 +75,18 @@ export default function Home() {
         formLoading={formLoading}
         handleForm={handleForm}
         progress={progress}
+        pessoas={pessoas}
+        setPessoas={setPessoas}
+        jogaOnline={jogaOnline}
+        setJogaOnline={setJogaOnline}
+        usaTrabalho={usaTrabalho}
+        setUsaTrabalho={setUsaTrabalho}
+        dispositivos={dispositivos}
+        setDispositivos={setDispositivos}
+        streaming={streaming}
+        setStreaming={setStreaming}
+        estudar={estudar}
+        setEstudar={setEstudar}
       />
     </>
   );

@@ -22,6 +22,20 @@ export default function ModalTest({
   formLoading,
   handleForm,
   setPag,
+  myPlan,
+  setMyPlan,
+  pessoas,
+  setPessoas,
+  jogaOnline,
+  setJogaOnline,
+  usaTrabalho,
+  setUsaTrabalho,
+  dispositivos,
+  setDispositivos,
+  streaming,
+  setStreaming,
+  estudar,
+  setEstudar,
 }) {
   return (
     <Modal size="2xl" onClose={onClose} isOpen={isOpen} isCentered>
@@ -70,19 +84,33 @@ export default function ModalTest({
           color="var(--azul)"
           bg="white"
         />
-        <Pages city={city} setCity={setCity} pag={pag} />
+        <Pages
+          pessoas={pessoas}
+          setPessoas={setPessoas}
+          jogaOnline={jogaOnline}
+          setJogaOnline={setJogaOnline}
+          usaTrabalho={usaTrabalho}
+          setUsaTrabalho={setUsaTrabalho}
+          dispositivos={dispositivos}
+          setDispositivos={setDispositivos}
+          streaming={streaming}
+          setStreaming={setStreaming}
+          estudar={estudar}
+          setEstudar={setEstudar}
+          setPag={setPag}
+          myPlan={myPlan}
+          setMyPlan={setMyPlan}
+          city={city}
+          setCity={setCity}
+          pag={pag}
+        />
         <ModalFooter>
-          {pag > 1 && (
-            <Button
-              color="#BFBFBF"
-              variant="ghost"
-              mr="10px"
-              onClick={prevPag}
-            >
+          {(pag > 1 && pag !== 3) && (
+            <Button color="#BFBFBF" variant="ghost" mr="10px" onClick={prevPag}>
               Anterior
             </Button>
           )}
-          {pag < 6 && (
+          {pag < 6 && pag !== 3 && (
             <Button
               className="avancar"
               rightIcon={<FiArrowRight size="18" />}
@@ -97,6 +125,7 @@ export default function ModalTest({
               Avançar
             </Button>
           )}
+          
           {pag === 6 && (
             <Button
               loadingText="Enviando"

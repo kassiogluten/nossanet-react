@@ -5,7 +5,7 @@ import { Top } from "./Top";
 import { Plan } from "./Plan";
 
 import {cidades} from '../../../components/cities'
-import {planos} from '../../../components/planos'
+import {planosEmpresariais} from '../../../components/planosEmpresariais'
 
 export default function Section5() {
 
@@ -27,7 +27,7 @@ export default function Section5() {
           toggleSelect={toggleSelect}
           setIsSelectOpen={setIsSelectOpen}
         />
-        <Plan planos={planos} selectedCity={selectedCity} />
+        <Plan planosEmpresariais={planosEmpresariais} selectedCity={selectedCity} />
       </Section5Content>
     </Section5Container>
   );

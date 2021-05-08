@@ -46,7 +46,6 @@ export const HeaderContent = styled.div`
     gap: 0.5rem;
 
     li {
-      margin-left: 0.5rem;
       font-size: 1.1rem;
       font-weight: 700;
       padding: 0.5rem;

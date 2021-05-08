@@ -60,6 +60,7 @@ export function Plan({
               </div>
               <button
                 onClick={() => {
+                  setMyPlan(plano.plano);
                   setPag(4);
                   onOpen();
                 }}

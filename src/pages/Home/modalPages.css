@@ -1,7 +1,189 @@
-.chakra-radio-group{
-  margin-bottom: 20px;
+.chakra-modal__body h3,
+.chakra-radio-group {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  color: var(--azulprimaria);
+  margin-left: 10px;
 }
 
-.chakra-radio{
-  margin-right: 20px;
+.chakra-modal__body {
+  padding-top: 30px !important;
+}
+.chakra-modal__body img,
+.chakra-modal__body h3 {
+  display: inline;
+}
+
+.chakra-modal__body .chakra-radio-group {
+  padding: 5px 10px 20px;
+  font-weight: 400;
+}
+
+.chakra-modal__body .chakra-radio {
+  padding: 5px 10px;
+}
+.chakra-modal__body .chakra-radio__control::before {
+  color: var(--azulprimaria);
+}
+.chakra-modal__body .chakra-radio__control[data-checked] {
+  background-color: var(--branco);
+  border-color: var(--azulprimaria);
+}
+.chakra-modal__body .chakra-radio__control[data-checked]::before {
+  width: 12px;
+  height: 12px;
+}
+
+.chakra-modal__body .chakra-radio__control {
+  border-color: var(--azulprimaria);
+  border-width: 1px;
+  width: 18px;
+  height: 18px;
+}
+.chakra-modal__body .wrapper {
+}
+.chakra-modal__body .wrapper h3 {
+  color: var(--azulprimaria);
+  display: block;
+  text-align: center;
+  font-family: UniNeue;
+  font-weight: 800;
+  font-size: 2.25rem;
+}
+
+.chakra-modal__body .wrapper .preco {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+}
+.chakra-modal__body .wrapper button {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.chakra-modal__body .planoIdeal {
+  display: flex;
+  padding: 1rem;
+}
+.chakra-modal__body .planoIdeal .box1 {
+  display: block;
+  border-right: 2px solid #f1f1f1;
+  padding: 1rem;
+}
+.chakra-modal__body .planoIdeal .box1 p {
+  color: var(--acessibilidade);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.chakra-modal__body .planoIdeal .box1 h1 {
+  color: var(--azulprimaria);
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.chakra-modal__body .planoIdeal .box2 {
+  font-family: "Poppins";
+  padding: 1rem;
+  flex: 1;
+  color: var(--azulprimaria);
+  font-weight: 500;
+  font-size: 0.9rem;
+  min-height: 130px;
+}
+.chakra-modal__body .planoIdeal .box2 span {
+  border-bottom: 1px solid #f1f1f1;
+  display: block;
+  margin-bottom: 10px;
+}
+.chakra-modal__body .planoIdeal .box2 ul {
+  list-style: none;
+
+}
+.chakra-modal__body .planoIdeal .box2 li {
+  display: inline-block;
+  width: 50%;
+}
+.chakra-modal__body .wrapper {
+  color: var(--azul);
+}
+
+.wrapper p {
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.wrapper .preco {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 700;
+}
+
+.wrapper .preco span:nth-child(1) {
+  font-size: 1.2rem;
+}
+
+.wrapper .preco span:nth-child(2) {
+  font-size: 3.75rem;
+  font-weight: 900;
+  color: var(--acessibilidade);
+  line-height: 100%;
+  margin-left: 5px;
+}
+.wrapper .preco span:nth-child(3) {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--acessibilidade);
+}
+.wrapper .preco span:nth-child(4) {
+  font-size: 0.9rem;
+  align-self: flex-end;
+  margin-left: -35px;
+  margin-bottom: 7px;
+}
+
+@media (max-width: 700px) {
+  .chakra-modal__body .planoIdeal {
+    display: block;
+  }
+  .chakra-modal__body .planoIdeal .box1 {
+    display: block;
+    border: none;
+    border-bottom: 2px solid #f1f1f1;
+  }
+
+  .chakra-modal__body .planoIdeal .box1 h1,
+  .chakra-modal__body .planoIdeal .box1 p {
+    text-align: center;
+  }
+
+  .chakra-modal__body .planoIdeal .box2 span {
+    border: none;
+    text-align: center;
+  }
+
+  .chakra-modal__body .wrapper .preco {
+    flex: 1;
+    display: flex;
+    position: inherit;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .chakra-modal__body .wrapper button {
+    display: block;
+    position: inherit;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .chakra-modal__body .wrapper > p {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  
+  .chakra-modal__body .planoIdeal .box2 li {
+    width: 100%;
+  }
 }
