@@ -38,7 +38,7 @@ export default function ModalTest({
   setEstudar,
 }) {
   return (
-    <Modal size="2xl" onClose={onClose} isOpen={isOpen} isCentered>
+    <Modal size="2xl" onClose={onClose} isOpen={isOpen}>
       <ModalOverlay />
       <ModalContent mx={5}>
         <ModalHeader

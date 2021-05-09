@@ -41,8 +41,7 @@
   width: 18px;
   height: 18px;
 }
-.chakra-modal__body .wrapper {
-}
+
 .chakra-modal__body .wrapper h3 {
   color: var(--azulprimaria);
   display: block;
@@ -144,6 +143,9 @@
 }
 
 @media (max-width: 700px) {
+  .chakra-modal__body h3{
+    font-size: .8rem;
+  }
   .chakra-modal__body .planoIdeal {
     display: block;
   }
