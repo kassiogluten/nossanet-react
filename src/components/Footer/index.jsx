@@ -51,11 +51,15 @@ export default function Footer() {
               <p>Seg - Sex: 8h às 18h</p>
               <p>Sábados: 8h às 12h</p>
             </div>
-            <IconButton
-              aria-label="Nossanet Instagram"
-              icon={<FaInstagram />}
-            />
-            <IconButton aria-label="Nossanet Facebook" icon={<FaFacebookF />} />
+            <a href="https://www.instagram.com/nossanettelecom/" target="blank">
+              <IconButton
+                aria-label="Nossanet Instagram"
+                icon={<FaInstagram />}
+              />
+            </a>
+            <a href="https://www.instagram.com/nossanettelecom/" target="blank">
+              <IconButton aria-label="Nossanet Facebook" icon={<FaFacebookF />} />
+            </a>
           </div>
           <div className="col4">
             <span>© 2021 NossaNet - Todos direitos reservados</span>

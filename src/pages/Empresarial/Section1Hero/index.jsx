@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 const MotionSection1HeroContainer = motion(Section1HeroContainer);
 
 const variants = {
-  hidden: { opacity: 1},
+  hidden: { opacity: 1 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: .5,
-      delayChildren: .5,
+      staggerChildren: 0.5,
+      delayChildren: 0.5,
       duration: 1,
     },
   },
@@ -29,11 +29,15 @@ const variantsItems = {
 
 export default function Section1Hero() {
   return (
-    <MotionSection1HeroContainer variants={variants} initial="hidden" animate="show">
+    <MotionSection1HeroContainer
+      variants={variants}
+      initial="hidden"
+      animate="show"
+    >
       <Section1HeroContent>
         <motion.h1 variants={variantsItems}>
-          conexão para momentos{" "}
-          <motion.span variants={variantsItems}>especiais</motion.span>.
+          Conexão ideial para o crescimento da sua{" "}
+          <motion.span variants={variantsItems}>empresa</motion.span>.
         </motion.h1>
         <motion.a variants={variantsItems} href="#planos">
           <Button

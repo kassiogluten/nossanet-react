@@ -7,7 +7,7 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/modal";
-import { FiArrowRight, FiCheck, FiRepeat } from "react-icons/fi";
+import { FiArrowRight, FiCheck } from "react-icons/fi";
 
 export default function ModalTest({
   pag,
@@ -105,7 +105,7 @@ export default function ModalTest({
           pag={pag}
         />
         <ModalFooter>
-          {(pag > 1 && pag !== 3) && (
+          {(pag > 1 && pag !== 3 && pag !== 4) && (
             <Button color="#BFBFBF" variant="ghost" mr="10px" onClick={prevPag}>
               Anterior
             </Button>
@@ -145,18 +145,6 @@ export default function ModalTest({
           )}
           {pag > 6 && (
             <div>
-              <Button
-                rightIcon={<FiRepeat />}
-                fontWeight={800}
-                w="150px"
-                h="54px"
-                _hover={{ bg: "#51a84e" }}
-                color="white"
-                bg="var(--acessibilidade)"
-                onClick={() => setPag(1)}
-              >
-                Recomeçar
-              </Button>
               <Button
                 m="5px"
                 rightIcon={<FiCheck />}

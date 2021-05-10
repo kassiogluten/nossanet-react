@@ -1,0 +1,22 @@
+#formcontato input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+#formcontato span {
+  color:red;
+  font-weight: 700;
+  padding:5px;
+}
+
+::placeholder {
+  padding: 10px 5px;
+}
+#formcontato input:focus {
+  border: 2px solid #005188;
+  outline: 0 solid #005188;
+}
+#formcontato input:not([value=""]):not(:focus):invalid{
+  border: 2px solid red;
+}

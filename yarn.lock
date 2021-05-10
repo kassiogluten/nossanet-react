@@ -5028,6 +5028,11 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+emailjs-com@^2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/emailjs-com/-/emailjs-com-2.6.4.tgz#c3bac8f7ee58d536ab34923e73013ad39f299f46"
+  integrity sha512-4G8rxq+1mbL4rGntMa9tqNJ4N9BhuCl8lFJASDHxZVXeC82ivwL6qw+Zu48cAWHpNK2/F3vScaAZk8zoTAfiAA==
+
 emittery@^0.7.1:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz#25595908e13af0f5674ab419396e2fb394cdfa82"
@@ -9921,6 +9926,11 @@ react-focus-lock@2.5.0:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
+react-hook-form@^7.5.1:
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.5.1.tgz#344adc4718ee7804b044c2fc265937d207b8adbb"
+  integrity sha512-L0cfOEeO+Vr14FaW0+l3oKGkoSz2FuYjvxRkarcImbJT99qp4238VkbopnB62nGssVULurjRkhYuAnjNoA5NvQ==
+
 react-icons@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
@@ -11495,6 +11505,11 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+the-mask-input@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/the-mask-input/-/the-mask-input-2.5.0.tgz#72d6c8cdc0b7a5b1f0a107ea3945e19855efdc19"
+  integrity sha512-i+zc8b1VCy0P3AWSNOuDUsg+oToBZrujpRA0F4STeufPZrky5Nr8bXVZEQJMowncnEkOZgnLFDMcHMNg+E2Nuw==
 
 throat@^5.0.0:
   version "5.0.0"

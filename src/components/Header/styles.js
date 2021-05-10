@@ -77,6 +77,10 @@ export const HeaderContent = styled.div`
 `;
 
 export const MobileMenu = styled(motion.nav)`
+  @media (min-width: 700px) {
+    display: none;
+  }
+
   @media (max-width: 700px) {
     position: absolute;
     z-index: 10;

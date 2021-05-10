@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  overflow: hidden;
   position: relative;
   display: block;
   background-color: var(--azul);
@@ -107,6 +108,9 @@ export const Content = styled.div`
 
     a {
       display: block;
+    }
+    .col3 a {
+      display: inline;
     }
   }
 
