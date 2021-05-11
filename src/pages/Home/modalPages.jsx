@@ -16,6 +16,7 @@ import iconeVideo from "../../assets/calculator/icone-video.svg";
 
 import "./modalPages.css";
 import { FiArrowRight } from "react-icons/fi";
+import { FormModal1, FormModal2 } from "../../components/FormModal";
 
 export function Pages({
   setPag,
@@ -37,6 +38,8 @@ export function Pages({
   estudar,
   setEstudar,
 }) {
+
+
   const pontuacao =
     parseInt(pessoas) +
     parseInt(jogaOnline) +
@@ -269,9 +272,9 @@ export function Pages({
     return (
       <>
         <ModalBody>
-          <h1>formulario dados pessoais</h1>
           <h1>Cidade selecionada: {city}</h1>
-          <h1>Plano selecionado: {myPlan}</h1>
+          <h1>Plano selecionado: {myPlan} Mega</h1>
+          <FormModal1/>
         </ModalBody>
       </>
     );
@@ -280,7 +283,7 @@ export function Pages({
     return (
       <>
         <ModalBody>
-          <h1>formulario endereço</h1>
+          <FormModal2 city={city}/>
         </ModalBody>
       </>
     );

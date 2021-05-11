@@ -11,7 +11,7 @@ import {
 
 import Input from "the-mask-input";
 
-import './formcontato.css'
+import '../../../styles/formcontato.css'
 
 export default function FormHome() {
   const { register, handleSubmit, reset, formState } = useForm();

@@ -1,0 +1,52 @@
+#formcontato input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 2px solid #ddd;
+  
+  border-radius: 5px;
+}
+
+#formcontato label,
+#formcontato input,
+#formcontato textarea,
+#formcontato select {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+#formcontato label {
+  margin-top: 15px;
+  color: var(--azulprimaria);
+}
+
+#formcontato span {
+  font-size: .8rem;
+  color:red;
+  font-weight: 700;
+  padding:5px;
+}
+
+::placeholder, ::-webkit-input-placeholder {
+  padding: 10px 5px;
+  color: #ddd;
+}
+
+#formcontato input::placeholder {
+  color: #ddd;
+  font-weight: 600;
+}
+#formcontato input:focus {
+  border: 2px solid #005188;
+  outline: 0 solid #005188;
+}
+
+#formcontato input:not(:placeholder-shown){
+  border: 2px solid green;
+}
+
+#formcontato input:focus:invalid{
+  border: 2px solid red;
+}
+
+#formcontato input:invalid{
+  border: 2px solid red !important;
+}
