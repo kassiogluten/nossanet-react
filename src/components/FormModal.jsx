@@ -1,23 +1,34 @@
-import { FormControl, FormLabel, Select, HStack, Box } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormLabel,
+  Select,
+  HStack,
+  Box,
+  Button,
+} from "@chakra-ui/react";
 import Input from "the-mask-input";
 import "../styles/formcontato.css";
 import { cidades } from "../components/cities";
-import { useState } from "react";
+import { useRef } from "react";
+import { FiArrowRight } from "react-icons/fi";
 
-export function FormModal1() {
-  const [dados, setDados] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-    cpf: "",
-  });
-  const handleNome = (event) =>
-    setDados({ ...dados, nome: event.target.value });
-  const handleEmail = (event) =>
-    setDados({ ...dados, email: event.target.value });
-  const handleTelefone = (event) =>
-    setDados({ ...dados, telefone: event.target.value });
-  const handleCPF = (event) => setDados({ ...dados, cpf: event.target.value });
+export function FormModal1({ dados, setDados, setPag, pag }) {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const telefoneRef = useRef(null);
+  const cpfRef = useRef(null);
+
+  const handleSubmitButton = (event) => {
+    event.preventDefault();
+    setDados({
+      ...dados,
+      nome: nameRef.current.value,
+      email: emailRef.current.value,
+      telefone: telefoneRef.current.value,
+      cpf: cpfRef.current.value,
+    });
+    setPag(pag + 1);
+  };
   return (
     <form
       id="formcontato"
@@ -26,19 +37,14 @@ export function FormModal1() {
       noValidate
       mt={10}
     >
-      {dados.nome && <h1>Nome: {dados.nome}</h1>}
-      {dados.email && <h1>Email: {dados.email}</h1>}
-      {dados.telefone && <h1>Telefone: {dados.telefone}</h1>}
-      {dados.cpf && <h1>CPF: {dados.cpf}</h1>}
       <FormLabel htmlFor="nome">Nome completo</FormLabel>
       <Input
-      key="nome"
-        value={dados.nome}
-        onChange={handleNome}
+        defaultValue={dados.nome}
+        ref={nameRef}
+        /* value={dados.nome}
+        onChange={handleNome} */
         type="text"
-        id="nome"
         placeholder="Qual o seu nome ?"
-        name="nome"
         /*         {...register("name", {
           required: {
             value: true,
@@ -50,11 +56,9 @@ export function FormModal1() {
 
       <FormLabel htmlFor="email">E-mail</FormLabel>
       <Input
-      key="email"
-        value={dados.email}
-        onChange={handleEmail}
+        defaultValue={dados.email}
+        ref={emailRef}
         type="email"
-        id="email"
         placeholder="Qual seu e-mail ?"
         name="email"
         /*  {...register("email", {
@@ -67,8 +71,8 @@ export function FormModal1() {
         <Box w="50%">
           <FormLabel htmlFor="telefone">Telefone</FormLabel>
           <Input
-            value={dados.telefone}
-            onChange={handleTelefone}
+            defaultValue={dados.telefone}
+            ref={telefoneRef}
             mask="cellTelephone"
             type="text"
             id="telefone"
@@ -88,15 +92,15 @@ export function FormModal1() {
           {/*  {errors.telefone && <span>{errors.telefone.message}</span>} */}
         </Box>
         <Box w="50%">
-          <FormLabel htmlFor="CPF">CPF</FormLabel>
+          <FormLabel htmlFor="cpf">CPF</FormLabel>
           <Input
-            value={dados.cpf}
-            onChange={handleCPF}
+            defaultValue={dados.cpf}
+            ref={cpfRef}
             mask="cpf"
             type="text"
-            id="CPF"
+            id="cpf"
             placeholder="___.___.___-__"
-            name="CPF"
+            name="cpf"
             /* {...register("CPF", {
           required: {
             value: true,
@@ -111,10 +115,39 @@ export function FormModal1() {
           {/*  {errors.telefone && <span>{errors.telefone.message}</span>} */}
         </Box>
       </HStack>
+      <Button
+        id="avanca-form"
+        rightIcon={<FiArrowRight color="white" size="18" />}
+        fontWeight={800}
+        w="242px"
+        h="54px"
+        _hover={{ bg: "#51a84e" }}
+        color="white"
+        bg="var(--acessibilidade)"
+        onClick={handleSubmitButton}
+      >
+        Avançar
+      </Button>
     </form>
   );
 }
-export function FormModal2({city}) {
+export function FormModal2({ dados, setDados, setPag, pag, city }) {
+  const cepRef = useRef(null);
+  const ruaRef = useRef(null);
+  const numeroRef = useRef(null);
+  const complementoRef = useRef(null);
+
+  const handleSubmitButton = (event) => {
+    event.preventDefault();
+    setDados({
+      ...dados,
+      cep: cepRef.current.value,
+      rua: ruaRef.current.value,
+      numero: numeroRef.current.value,
+      complemento: complementoRef.current.value,
+    });
+    setPag(pag + 1);
+  };
   return (
     <form
       id="formcontato"
@@ -126,11 +159,11 @@ export function FormModal2({city}) {
       <Box w="60%">
         <FormLabel htmlFor="nome">CEP</FormLabel>
         <Input
+        defaultValue={dados.cep}
+        ref={cepRef}
           mask="cep"
           type="text"
-          id="cep"
           placeholder="_____-___"
-          name="cep"
           /*         {...register("name", {
           required: {
             value: true,
@@ -143,6 +176,8 @@ export function FormModal2({city}) {
 
       <FormLabel htmlFor="email">Rua</FormLabel>
       <Input
+      defaultValue={dados.rua}
+      ref={ruaRef}
         type="text"
         id="rua"
         placeholder="Digite seu endereço"
@@ -157,6 +192,8 @@ export function FormModal2({city}) {
         <Box w="40%">
           <FormLabel htmlFor="numero">Numero</FormLabel>
           <Input
+          defaultValue={dados.numero}
+          ref={numeroRef}
             type="text"
             id="numero"
             placeholder="Numero da residência"
@@ -177,6 +214,8 @@ export function FormModal2({city}) {
         <Box w="40%">
           <FormLabel htmlFor="complemento">Complemento</FormLabel>
           <Input
+          defaultValue={dados.complemento}
+          ref={complementoRef}
             type="text"
             id="complemento"
             placeholder="EX: AP 202"
@@ -198,7 +237,9 @@ export function FormModal2({city}) {
       <HStack>
         <Box w="50%">
           <FormLabel>Cidade</FormLabel>
-          <Select disabled defaultValue={city}
+          <Select
+            disabled
+            defaultValue={city}
             name="cidade"
             /*  {...register("departamento")} */
             placeholder="Selecione sua cidade"
@@ -232,6 +273,19 @@ export function FormModal2({city}) {
           {/*  {errors.telefone && <span>{errors.telefone.message}</span>} */}
         </Box>
       </HStack>
+      <Button
+        id="avanca-form"
+        rightIcon={<FiArrowRight color="white" size="18" />}
+        fontWeight={800}
+        w="242px"
+        h="54px"
+        _hover={{ bg: "#51a84e" }}
+        color="white"
+        bg="var(--acessibilidade)"
+        onClick={handleSubmitButton}
+      >
+        Avançar
+      </Button>
     </form>
   );
 }

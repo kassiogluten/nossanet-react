@@ -10,11 +10,11 @@
   transition: all 1s;
 }
 
-section.chakra-modal__content {
+.chakra-modal__content {
   border-radius: 10px;
 }
 
-section.chakra-modal__content header {
+.chakra-modal__content header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@ section.chakra-modal__content header {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-section.chakra-modal__content header div {
+.chakra-modal__content header div {
   margin-right: 15px;
 }
 

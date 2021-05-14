@@ -7,6 +7,7 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/modal";
+import {motion } from "framer-motion";
 import { FiArrowRight, FiCheck } from "react-icons/fi";
 
 export default function ModalTest({
@@ -38,14 +39,21 @@ export default function ModalTest({
   setEstudar,
 }) {
   return (
-    <Modal size="2xl" onClose={onClose} isOpen={isOpen}>
+    <Modal size="3xl" onClose={onClose} isOpen={isOpen}>
       <ModalOverlay />
-      <ModalContent mx={5}>
+      <ModalContent
+        as={motion.div}
+        layout
+        mx={5}
+        borderTopRadius={10}
+      >
         <ModalHeader
           className="modalHeader"
           color="white"
           borderTopRadius="5px"
           bg="var(--acessibilidade)"
+          fontSize="1.5rem"
+          fontWeight="700"
         >
           {pag === 2
             ? "Vamos escolher o plano ideial para você"
@@ -105,12 +113,12 @@ export default function ModalTest({
           pag={pag}
         />
         <ModalFooter>
-          {(pag > 1 && pag !== 3 && pag !== 4) && (
+          {pag > 1 && pag !== 3 && pag !== 4 && (
             <Button color="#BFBFBF" variant="ghost" mr="10px" onClick={prevPag}>
               Anterior
             </Button>
           )}
-          {pag < 6 && pag !== 3 && (
+          {(pag === 1) | (pag === 2) ? (
             <Button
               className="avancar"
               rightIcon={<FiArrowRight size="18" />}
@@ -124,8 +132,8 @@ export default function ModalTest({
             >
               Avançar
             </Button>
-          )}
-          
+          ) : null}
+
           {pag === 6 && (
             <Button
               loadingText="Enviando"

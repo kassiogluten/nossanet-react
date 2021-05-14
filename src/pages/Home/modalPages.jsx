@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/button";
-import { HStack } from "@chakra-ui/layout";
+import { Box, HStack } from "@chakra-ui/layout";
 import { ModalBody } from "@chakra-ui/modal";
 import { Radio, RadioGroup } from "@chakra-ui/radio";
 
@@ -17,6 +17,7 @@ import iconeVideo from "../../assets/calculator/icone-video.svg";
 import "./modalPages.css";
 import { FiArrowRight } from "react-icons/fi";
 import { FormModal1, FormModal2 } from "../../components/FormModal";
+import { useState } from "react";
 
 export function Pages({
   setPag,
@@ -38,8 +39,6 @@ export function Pages({
   estudar,
   setEstudar,
 }) {
-
-
   const pontuacao =
     parseInt(pessoas) +
     parseInt(jogaOnline) +
@@ -48,10 +47,21 @@ export function Pages({
     parseInt(streaming) +
     parseInt(estudar);
 
+  const [dados, setDados] = useState({
+    nome: "",
+    email: "",
+    telefone: "",
+    cpf: "",
+    cep: "",
+    rua: "",
+    numero: "",
+    complemento: "",
+  });
+
   function Pag1() {
     return (
       <>
-        <ModalBody>
+        <ModalBody style={{ display: "block" }}>
           <img
             width="20px"
             height="20px"
@@ -126,7 +136,7 @@ export function Pages({
   function Pag2() {
     return (
       <>
-        <ModalBody>
+        <ModalBody style={{ display: "block" }}>
           <img
             width="20px"
             height="20px"
@@ -272,9 +282,38 @@ export function Pages({
     return (
       <>
         <ModalBody>
-          <h1>Cidade selecionada: {city}</h1>
-          <h1>Plano selecionado: {myPlan} Mega</h1>
-          <FormModal1/>
+          <div className="box3">
+            <FormModal1
+              pag={pag}
+              setPag={setPag}
+              dados={dados}
+              setDados={setDados}
+            />
+          </div>
+          <div className="box4">
+            <h1>SUA ESCOLHA</h1>
+            <p>Pacote</p>
+            <h2>{myPlan} Mega</h2>
+            <p>Valor</p>
+            <h2>
+              {myPlan === 30
+                ? 79
+                : myPlan === 100
+                ? 99
+                : myPlan === 200
+                ? 129
+                : myPlan === 300
+                ? 149
+                : myPlan === 3
+                ? 59
+                : myPlan === 5
+                ? 79
+                : myPlan === 7
+                ? 99
+                : null}
+              ,90 /mês
+            </h2>
+          </div>
         </ModalBody>
       </>
     );
@@ -283,7 +322,39 @@ export function Pages({
     return (
       <>
         <ModalBody>
-          <FormModal2 city={city}/>
+          <div className="box3">
+            <FormModal2
+              city={city}
+              pag={pag}
+              setPag={setPag}
+              dados={dados}
+              setDados={setDados}
+            />
+          </div>
+          <div className="box4">
+            <h1>SUA ESCOLHA</h1>
+            <p>Pacote</p>
+            <h2>{myPlan} Mega</h2>
+            <p>Valor</p>
+            <h2>
+              {myPlan === 30
+                ? 79
+                : myPlan === 100
+                ? 99
+                : myPlan === 200
+                ? 129
+                : myPlan === 300
+                ? 149
+                : myPlan === 3
+                ? 59
+                : myPlan === 5
+                ? 79
+                : myPlan === 7
+                ? 99
+                : null}
+              ,90 /mês
+            </h2>
+          </div>
         </ModalBody>
       </>
     );
@@ -292,7 +363,93 @@ export function Pages({
     return (
       <>
         <ModalBody>
-          <h1>revisao</h1>
+          <div
+            className="box3"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              color: "var(--azulprimaria)",
+            }}
+          >
+            <Box p={2} w="50%">
+              <h5>
+                <strong>Nome:</strong>
+              </h5>
+              <h5>{dados.nome}</h5>
+            </Box>
+            <Box p={2} w="50%">
+              <h5>
+                <strong>CPF:</strong>
+              </h5>
+              <h5>{dados.cpf}</h5>
+            </Box>
+            <Box p={2} w="50%">
+              <h5>
+                <strong>Email:</strong>
+              </h5>
+              <h5>{dados.email}</h5>
+            </Box>
+            <Box p={2} w="50%">
+              <h5>
+                <strong>Telefone:</strong>
+              </h5>
+              <h5>{dados.telefone}</h5>
+            </Box>
+            <Box p={2} mt="1rem" w="100%">
+              <h5>
+                <strong>CEP:</strong>
+              </h5>
+              <h5>{dados.cep}</h5>
+            </Box>
+            <Box p={2} w="100%">
+              <h5>
+                <strong>Rua:</strong>
+              </h5>
+              <h5>{dados.rua}</h5>
+            </Box>
+            <Box p={2} w="50%">
+              <h5>
+                <strong>Numero:</strong>
+              </h5>
+              <h5>{dados.numero}</h5>
+            </Box>
+            <Box p={2} w="50%">
+              <h5>
+                <strong>Complemento:</strong>
+              </h5>
+              <h5>{dados.complemento}</h5>
+            </Box>
+            <Box p={2}>
+              <h5>
+                <strong>Cidade:</strong>
+              </h5>
+              <h5>{city}</h5>
+            </Box>
+          </div>
+          <div className="box4">
+            <h1>SUA ESCOLHA</h1>
+            <p>Pacote</p>
+            <h2>{myPlan} Mega</h2>
+            <p>Valor</p>
+            <h2>
+              {myPlan === 30
+                ? 79
+                : myPlan === 100
+                ? 99
+                : myPlan === 200
+                ? 129
+                : myPlan === 300
+                ? 149
+                : myPlan === 3
+                ? 59
+                : myPlan === 5
+                ? 79
+                : myPlan === 7
+                ? 99
+                : null}
+              ,90 /mês
+            </h2>
+          </div>
         </ModalBody>
       </>
     );
@@ -301,7 +458,10 @@ export function Pages({
     return (
       <>
         <ModalBody>
-          <h1>msg enviada</h1>
+          <div id="telafinal">
+            <h1>Pronto!</h1>
+            <h2>Nossa equipe entrará em contato com você. </h2>
+          </div>
         </ModalBody>
       </>
     );

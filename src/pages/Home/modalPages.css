@@ -8,7 +8,8 @@
 }
 
 .chakra-modal__body {
-  padding-top: 30px !important;
+  padding: 2rem 2rem 4rem 2rem !important;
+  display: flex;
 }
 .chakra-modal__body img,
 .chakra-modal__body h3 {
@@ -98,7 +99,6 @@
 }
 .chakra-modal__body .planoIdeal .box2 ul {
   list-style: none;
-
 }
 .chakra-modal__body .planoIdeal .box2 li {
   display: inline-block;
@@ -142,9 +142,49 @@
   margin-bottom: 7px;
 }
 
+.chakra-modal__body .box3 {
+  width: 60%;
+}
+.chakra-modal__body .box4 {
+  width: 40%;
+  background-color: var(--azulprimaria);
+  color: var(--branco);
+  border-radius: 10px;
+  height: fit-content;
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.chakra-modal__body .box4 h1 {
+  text-align: center;
+  font-weight: 800;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+  border-bottom: 1px solid #ffffff22;
+}
+
+.chakra-modal__body .box4 h2 {
+  font-weight: 800;
+  font-size: 1.11rem;
+}
+
+#telafinal{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 4rem;
+  align-items: center;
+  color:var(--azulprimaria);
+  font-weight: 800;
+  text-align: center;
+
+}
+#telafinal h1{font-size: 2rem;}
+#telafinal h2{font-size: 1.5rem;}
+
 @media (max-width: 700px) {
-  .chakra-modal__body h3{
-    font-size: .8rem;
+  .chakra-modal__body h3 {
+    font-size: 0.8rem;
   }
   .chakra-modal__body .planoIdeal {
     display: block;
@@ -181,10 +221,20 @@
   .chakra-modal__body .wrapper > p {
     display: none;
   }
+  .chakra-modal__body {
+    display: block;
+    
+  }
+  .chakra-modal__body .box3 {
+    width: 95%;
+  }
+  .chakra-modal__body .box4{
+    min-width: 200px;
+    margin: 2rem auto;
+  }
 }
 
 @media (max-width: 400px) {
-  
   .chakra-modal__body .planoIdeal .box2 li {
     width: 100%;
   }

@@ -2,7 +2,6 @@
   width: 100%;
   padding: 10px 5px;
   border: 2px solid #ddd;
-  
   border-radius: 5px;
 }
 
@@ -49,4 +48,22 @@
 
 #formcontato input:invalid{
   border: 2px solid red !important;
+}
+
+#avanca-form{
+  display: flex;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+@media (max-width:600px){
+  #avanca-form{
+    display: flex;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 }
