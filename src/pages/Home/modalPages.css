@@ -239,3 +239,13 @@
     width: 100%;
   }
 }
+
+.enviar {
+  margin: 0 2rem -6rem auto;
+}
+
+@media (max-width: 600px) {
+  .enviar {
+    margin: auto;
+  }
+}

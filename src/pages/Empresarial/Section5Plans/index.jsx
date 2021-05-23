@@ -4,13 +4,18 @@ import { useState } from "react";
 import { Top } from "./Top";
 import { Plan } from "./Plan";
 
-import {cidades} from '../../../components/cities'
-import {planosEmpresariais} from '../../../components/planosEmpresariais'
+import { cidades } from "../../../components/cities";
+import { planos } from "../../../components/planosEmpresariais";
 
-export default function Section5() {
-
+export default function Section5({
+  pag,
+  setPag,
+  onOpen,
+  myPlan,
+  setMyPlan,
+}) {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
-  const [selectedCity, setSelectedCity] = useState(cidades[0]);
+  const [city, setCity] = useState(cidades[0]);
 
   function toggleSelect() {
     setIsSelectOpen(!isSelectOpen);
@@ -21,13 +26,23 @@ export default function Section5() {
       <Section5Content>
         <Top
           isSelectOpen={isSelectOpen}
-          selectedCity={selectedCity}
-          setSelectedCity={setSelectedCity}
+          city={city}
+          setcity={setCity}
           cidades={cidades}
           toggleSelect={toggleSelect}
           setIsSelectOpen={setIsSelectOpen}
+          setCity={setCity}
         />
-        <Plan planosEmpresariais={planosEmpresariais} selectedCity={selectedCity} />
+        <Plan
+          planos={planos}
+          city={city}
+          myPlan={myPlan}
+          setMyPlan={setMyPlan}
+          setCity={setCity}
+          pag={pag}
+          setPag={setPag}
+          onOpen={onOpen}
+        />
       </Section5Content>
     </Section5Container>
   );

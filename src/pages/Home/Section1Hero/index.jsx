@@ -11,7 +11,6 @@ const variants = {
     opacity: 1,
     transition: {
       staggerChildren: .5,
-      delayChildren: .5,
       duration: 1,
     },
   },

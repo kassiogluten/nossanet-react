@@ -1,4 +1,4 @@
-export const planosEmpresariais = [
+export const planos = [
   {
     tipo: "fibra",
     plano: 30,

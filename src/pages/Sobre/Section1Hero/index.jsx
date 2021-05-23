@@ -1,6 +1,4 @@
 import { Section1HeroContainer, Section1HeroContent } from "./styles";
-import { Button } from "@chakra-ui/react";
-import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const MotionSection1HeroContainer = motion(Section1HeroContainer);
@@ -35,23 +33,9 @@ export default function Section1Hero() {
     >
       <Section1HeroContent>
         <motion.h1 variants={variantsItems}>
-          Conexão ideial para o crescimento da sua{" "}
-          <motion.span variants={variantsItems}>empresa</motion.span>.
+          Nossa história traz a tragetória e molda o nosso
+          <motion.span variants={variantsItems}> futuro</motion.span>.
         </motion.h1>
-        <motion.a variants={variantsItems} href="#planos">
-          <Button
-            initial="hidden"
-            animate="show"
-            bg="var(--acessibilidade)"
-            _hover={{ bg: "#51A84E" }}
-            _active={{ bg: "#51A84E" }}
-            w={295}
-            h={54}
-            rightIcon={<FiArrowRight size={20} />}
-          >
-            Contrate agora
-          </Button>
-        </motion.a>
       </Section1HeroContent>
     </MotionSection1HeroContainer>
   );

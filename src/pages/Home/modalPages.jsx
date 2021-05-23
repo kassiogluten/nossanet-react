@@ -18,6 +18,9 @@ import "./modalPages.css";
 import { FiArrowRight } from "react-icons/fi";
 import { FormModal1, FormModal2 } from "../../components/FormModal";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import emailjs from "emailjs-com";
 
 export function Pages({
   setPag,
@@ -360,6 +363,46 @@ export function Pages({
     );
   }
   function Pag6() {
+    const { reset } = useForm();
+
+    const [isLoading, setIsLoading] = useState(false);
+
+    const onSubmit = async () => {
+      // Send form email
+      setIsLoading(true);
+      try {
+        const templateParams = {
+          name: dados.nome,
+          email: dados.email,
+          telefone: dados.telefone,
+          cpf: dados.cpf,
+          plano: myPlan + " Megas",
+          local:
+            dados.rua +
+            ", " +
+            dados.numero +
+            " / " +
+            dados.complemento +
+            " | " +
+            dados.cep +
+            " | " +
+            city,
+        };
+
+        await emailjs.send(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID2,
+          templateParams,
+          process.env.REACT_APP_USER_ID
+        );
+        setIsLoading(false);
+        setPag(pag + 1)
+        reset();
+      } catch (e) {
+        console.log(e);
+        setIsLoading(false);
+      }
+    };
     return (
       <>
         <ModalBody>
@@ -451,6 +494,21 @@ export function Pages({
             </h2>
           </div>
         </ModalBody>
+        <Button
+          loadingText="Carregando..."
+          isLoading={isLoading}
+          className="enviar"
+          rightIcon={<FiArrowRight size="18" />}
+          fontWeight={800}
+          w="242px"
+          h="54px"
+          _hover={{ bg: "#51a84e" }}
+          color="white"
+          bg="var(--acessibilidade)"
+          onClick={onSubmit}
+        >
+          Enviar
+        </Button>
       </>
     );
   }
@@ -460,7 +518,9 @@ export function Pages({
         <ModalBody>
           <div id="telafinal">
             <h1>Pronto!</h1>
-            <h2>Nossa equipe entrará em contato com você. </h2>
+            <h2>{dados.nome}</h2>
+            <h2>Nossa equipe entrará em contato com você no número informado.</h2>
+            <h4> {dados.telefone}. </h4>
           </div>
         </ModalBody>
       </>

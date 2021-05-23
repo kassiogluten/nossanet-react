@@ -1,6 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Contato from "./pages/Contato";
+import Sobre from "./pages/Sobre";
 import Empresarial from "./pages/Empresarial";
 import Vagas from "./pages/Vagas";
 import Home from "./pages/Home";
@@ -16,8 +16,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/contato">
-            <Contato />
+          <Route path="/sobre-nos">
+            <Sobre />
           </Route>
 
           <Route path="/empresarial">

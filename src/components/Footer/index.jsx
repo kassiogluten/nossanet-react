@@ -27,7 +27,7 @@ export default function Footer() {
             <Link to="/sobre-nos">
               <p>Sobre nós</p>
             </Link>
-            <Link to="/contato">Fale conosco</Link>
+            {/* <Link to="/contato">Fale conosco</Link> */}
             <Link to="/vagas">Trabalhe conosco</Link>
           </div>
           <div className="col2">

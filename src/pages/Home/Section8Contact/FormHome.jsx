@@ -37,6 +37,7 @@ export default function FormHome() {
         templateParams,
         process.env.REACT_APP_USER_ID
       );
+      console.log(data.message)
       setIsLoading(false);
       alert("enviado");
       reset();

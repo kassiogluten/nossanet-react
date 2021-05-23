@@ -1,6 +1,6 @@
 import Section1Hero from "./Section1Hero";
 
-export default function Vagas(){
+export default function Sobre(){
     return (
         <Section1Hero/>
 

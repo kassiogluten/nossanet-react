@@ -134,23 +134,6 @@ export default function ModalTest({
             </Button>
           ) : null}
 
-          {pag === 6 && (
-            <Button
-              loadingText="Enviando"
-              isLoading={formLoading}
-              className="avancar"
-              rightIcon={<FiArrowRight size="18" />}
-              fontWeight={800}
-              w="242px"
-              h="54px"
-              _hover={{ bg: "#51a84e" }}
-              color="white"
-              bg="var(--acessibilidade)"
-              onClick={handleForm}
-            >
-              Enviar
-            </Button>
-          )}
           {pag > 6 && (
             <div>
               <Button
