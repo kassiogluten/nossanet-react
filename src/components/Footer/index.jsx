@@ -46,7 +46,8 @@ export default function Footer() {
           <div className="col3">
             <h3>Atendimento</h3>
             <div className="line"></div>
-            <h2>(31) 3320-1995</h2>
+            <h2>0800 795 1585</h2>
+            <h2>(31) 2109-8560</h2>
             <div className="tel">
               <p>Seg - Sex: 8h às 18h</p>
               <p>Sábados: 8h às 12h</p>
@@ -58,11 +59,17 @@ export default function Footer() {
               />
             </a>
             <a href="https://www.instagram.com/nossanettelecom/" target="blank">
-              <IconButton aria-label="Nossanet Facebook" icon={<FaFacebookF />} />
+              <IconButton
+                aria-label="Nossanet Facebook"
+                icon={<FaFacebookF />}
+              />
             </a>
           </div>
           <div className="col4">
-            <span>© 2021 NossaNet - Todos direitos reservados</span>
+            <div>
+              <span>© Grupo Almeida e Reis Ltda.-ME</span><br/>
+              <span>CNPJ: 10.619.520/0001-30 – Todos direitos reservados</span>
+            </div>
             <a href="#a">
               Feito com <FcLike /> por Suricato Agência
             </a>

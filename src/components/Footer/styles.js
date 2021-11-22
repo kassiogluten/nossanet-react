@@ -10,7 +10,11 @@ export const Container = styled.section`
     top: 0;
     left: calc(-960px + 50vw);
     opacity: 0.8;
+    height: 100%;
     //left: 0;
+    img{
+      height: 100%;
+    }
   }
 `;
 

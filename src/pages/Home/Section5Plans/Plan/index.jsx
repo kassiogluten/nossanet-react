@@ -32,12 +32,12 @@ export function Plan({
             <div className="box1">
               <p>Nossanet {plano.tipo}</p>
               <h1>{plano.plano} Mega</h1>
-              {plano.tipo === "fibra" && (
+              {/* {plano.tipo === "fibra" && (
                 <span>+{plano.plano <= 30 ? "20" : "100"} mega bônus</span>
-              )}
+              )} */}
             </div>
             <div className="box2">
-              {plano.qualifica && <span>Incluso Qualifica</span>}
+              {plano.qualifica && <span>Incluso Qualifica + {plano.apps} App{plano.apps > 1 && "'s"}</span>}
               <ul>
                 <li>
                   {plano.tipo === "fibra"

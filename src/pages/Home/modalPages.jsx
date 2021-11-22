@@ -215,12 +215,12 @@ export function Pages({
                 plano.cidade === city &&
                 (plano.tipo === "fibra"
                   ? pontuacao < 4
-                    ? plano.plano === 30
-                    : pontuacao < 7
                     ? plano.plano === 100
+                    : pontuacao < 7
+                    ? plano.plano === 400
                     : pontuacao < 10
-                    ? plano.plano === 200
-                    : plano.plano === 300
+                    ? plano.plano === 600
+                    : plano.plano === 800
                   : pontuacao < 4
                   ? plano.plano === 3
                   : pontuacao < 6 && pontuacao > 3
@@ -236,7 +236,7 @@ export function Pages({
                     <h1>{plano.plano} Mega</h1>
                   </div>
                   <div className="box2">
-                    <span>Incluso Qualifica</span>
+                  <span>Incluso Qualifica + {plano.apps} App{plano.apps > 1 && "'s"}</span>
                     <ul>
                       <li>
                         {" "}
@@ -299,20 +299,14 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-              {myPlan === 30
+              {myPlan === 100
                 ? 79
-                : myPlan === 100
+                : myPlan === 400
                 ? 99
-                : myPlan === 200
+                : myPlan === 600
                 ? 129
-                : myPlan === 300
-                ? 149
-                : myPlan === 3
-                ? 59
-                : myPlan === 5
-                ? 79
-                : myPlan === 7
-                ? 99
+                : myPlan === 800
+                ? 169
                 : null}
               ,90 /mês
             </h2>
@@ -340,20 +334,14 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-              {myPlan === 30
+            {myPlan === 100
                 ? 79
-                : myPlan === 100
+                : myPlan === 400
                 ? 99
-                : myPlan === 200
+                : myPlan === 600
                 ? 129
-                : myPlan === 300
-                ? 149
-                : myPlan === 3
-                ? 59
-                : myPlan === 5
-                ? 79
-                : myPlan === 7
-                ? 99
+                : myPlan === 800
+                ? 169
                 : null}
               ,90 /mês
             </h2>
@@ -475,20 +463,14 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-              {myPlan === 30
+            {myPlan === 100
                 ? 79
-                : myPlan === 100
+                : myPlan === 400
                 ? 99
-                : myPlan === 200
+                : myPlan === 600
                 ? 129
-                : myPlan === 300
-                ? 149
-                : myPlan === 3
-                ? 59
-                : myPlan === 5
-                ? 79
-                : myPlan === 7
-                ? 99
+                : myPlan === 800
+                ? 169
                 : null}
               ,90 /mês
             </h2>
