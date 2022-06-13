@@ -11,13 +11,16 @@ import {
 
 import Input from "the-mask-input";
 
-import '../../../styles/formcontato.css'
+import "../../../styles/formcontato.css";
+import { useHistory } from "react-router-dom";
 
 export default function FormHome() {
   const { register, handleSubmit, reset, formState } = useForm();
 
   const { errors } = formState;
   const [isLoading, setIsLoading] = useState(false);
+
+  let history = useHistory();
 
   const onSubmit = async (data) => {
     // Send form email
@@ -37,10 +40,11 @@ export default function FormHome() {
         templateParams,
         process.env.REACT_APP_USER_ID
       );
-      console.log(data.message)
+      console.log(data.message);
       setIsLoading(false);
       alert("enviado");
       reset();
+      history.push("/obrigado");
     } catch (e) {
       console.log(e);
       setIsLoading(false);
@@ -48,7 +52,13 @@ export default function FormHome() {
   };
 
   return (
-    <form id='formcontato' as={FormControl} onSubmit={handleSubmit(onSubmit)} noValidate mt={10}>
+    <form
+      id="formcontato"
+      as={FormControl}
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+      mt={10}
+    >
       <FormLabel htmlFor="nome">Nome completo</FormLabel>
       <Input
         type="text"
@@ -72,7 +82,8 @@ export default function FormHome() {
         name="email"
         {...register("email", {
           required: true,
-          pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+          pattern:
+            /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
         })}
       />
       {errors.email && <span>Ops! O e-mail é inválido.</span>}

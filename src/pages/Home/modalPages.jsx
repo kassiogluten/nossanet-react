@@ -21,6 +21,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import emailjs from "emailjs-com";
+import { useHistory } from "react-router-dom";
 
 export function Pages({
   setPag,
@@ -236,7 +237,10 @@ export function Pages({
                     <h1>{plano.plano} Mega</h1>
                   </div>
                   <div className="box2">
-                  <span>Incluso Qualifica + {plano.apps} App{plano.apps > 1 && "'s"}</span>
+                    <span>
+                      Incluso Qualifica + {plano.apps} App
+                      {plano.apps > 1 && "'s"}
+                    </span>
                     <ul>
                       <li>
                         {" "}
@@ -334,7 +338,7 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-            {myPlan === 100
+              {myPlan === 100
                 ? 79
                 : myPlan === 400
                 ? 99
@@ -354,6 +358,7 @@ export function Pages({
     const { reset } = useForm();
 
     const [isLoading, setIsLoading] = useState(false);
+    let history = useHistory();
 
     const onSubmit = async () => {
       // Send form email
@@ -384,8 +389,9 @@ export function Pages({
           process.env.REACT_APP_USER_ID
         );
         setIsLoading(false);
-        setPag(pag + 1)
+        setPag(pag + 1);
         reset();
+        history.push("/obrigado");
       } catch (e) {
         console.log(e);
         setIsLoading(false);
@@ -463,7 +469,7 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-            {myPlan === 100
+              {myPlan === 100
                 ? 79
                 : myPlan === 400
                 ? 99
@@ -501,7 +507,9 @@ export function Pages({
           <div id="telafinal">
             <h1>Pronto!</h1>
             <h2>{dados.nome}</h2>
-            <h2>Nossa equipe entrará em contato com você no número informado.</h2>
+            <h2>
+              Nossa equipe entrará em contato com você no número informado.
+            </h2>
             <h4> {dados.telefone}. </h4>
           </div>
         </ModalBody>
