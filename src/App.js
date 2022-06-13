@@ -9,6 +9,7 @@ import { GlobalStyle } from "./styles/global";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Obrigado from "./pages/Obrigado";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
 
           <Route path="/vagas">
             <Vagas />
+          </Route>
+          <Route path="/obrigado">
+            <Obrigado />
           </Route>
 
           <Route path="/">
