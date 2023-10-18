@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FiMail, FiPhone, FiMapPin, FiMessageSquare } from "react-icons/fi";
 import { Button } from "@chakra-ui/button";
 import FormHome from "./FormHome";
+import fundoAtendimento from "../../../assets/fundo-atendimento-ao-cliente.png";
 
 export default function Section8() {
   return (
@@ -17,18 +18,26 @@ export default function Section8() {
 
       <Section8Content>
         <div className="box1">
-          <h1>
+          <img src={fundoAtendimento} alt="Atendimento" />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC"
+          >
+            <button>Ir para serviço de atendimento ao cliente</button>
+          </a>
+          {/* <h1>
             <FiMessageSquare size={30} color="var(--acessibilidade)" /> Se
             preferir, envie pelo formulário
-          </h1>
-          <FormHome />
+          </h1> */}
+          {/* <FormHome /> */}
         </div>
 
         <div className="box2">
           <div className="box2A">
             <p>ATENDIMENTO</p>
             <h1>Possui alguma dúvida? Fale com a gente.</h1>
-            <a target="blank" href="https://bit.ly/33991090453">
+            <a target="blank" href="https://wa.me/553121098560">
               <Button
                 bg="#fff"
                 color="#081150"
@@ -57,7 +66,10 @@ export default function Section8() {
               (31) 2109-8560
             </li>
           </a>
-          <a target="blank" href="https://www.google.com/maps/place/Av.+Jos%C3%A9+Rodrigues+de+Almeida,+190,+Ipaba+-+MG,+35198-000/@-19.412558,-42.422127,17z/data=!3m1!4b1!4m5!3m4!1s0xb00509a3895a91:0xa79c49ecc8a3713f!8m2!3d-19.4125631!4d-42.4199383">
+          <a
+            target="blank"
+            href="https://www.google.com/maps/place/Av.+Jos%C3%A9+Rodrigues+de+Almeida,+190,+Ipaba+-+MG,+35198-000/@-19.412558,-42.422127,17z/data=!3m1!4b1!4m5!3m4!1s0xb00509a3895a91:0xa79c49ecc8a3713f!8m2!3d-19.4125631!4d-42.4199383"
+          >
             <li>
               <FiMapPin size={20} />
               Av. José Rodrigues de Almeida, 190, Ipaba - MG, 35198-000

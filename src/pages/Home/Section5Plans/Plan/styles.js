@@ -2,6 +2,7 @@ import styled from "styled-components";
 //import { AnimatePresence } from "framer-motion";
 
 import iconeQualificaImg from "../../../../assets/icone-qualifica.png";
+import iconeDeezerImg from "../../../../assets/icone-deezer.webp";
 import poligonoVerdeImg from "../../../../assets/poligono-verde.svg";
 
 export const PlanDiv = styled.section`
@@ -80,14 +81,25 @@ export const PlanDiv = styled.section`
         font-weight: 500;
         color: var(--azulprimaria);
         padding: 10px 3px;
-
-        &::before {
-          content: "";
-          padding-left: 25px;
-          width: 20px;
-          height: 20px;
-          background: url(${iconeQualificaImg}) no-repeat;
-          background-size: contain;
+        qualifica {
+          &::before {
+            content: "";
+            padding-left: 25px;
+            width: 20px;
+            height: 20px;
+            background: url(${iconeQualificaImg}) no-repeat;
+            background-size: contain;
+          }
+        }
+        deezer {
+          &::before {
+            content: "";
+            padding-left: 25px;
+            width: 20px;
+            height: 20px;
+            background: url(${iconeDeezerImg}) no-repeat;
+            background-size: contain;
+          }
         }
       }
 

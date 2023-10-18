@@ -11,6 +11,22 @@ export function Plan({
   city,
   setCity,
 }) {
+  const Incluso = ({ plano }) => {
+    console.log(plano);
+    if (plano.apps === 1) {
+      return (
+        <span>
+          Incluso: <qualifica>Qualifica</qualifica>
+        </span>
+      );
+    } else
+      return (
+        <span>
+          Incluso: <qualifica>Qualifica</qualifica> + <deezer>Deezer</deezer>
+        </span>
+      );
+  };
+
   return (
     <PlanDiv>
       {planos
@@ -37,7 +53,7 @@ export function Plan({
               )} */}
             </div>
             <div className="box2">
-              {plano.qualifica && <span>Incluso Qualifica + {plano.apps} App{plano.apps > 1 && "'s"}</span>}
+              {plano.qualifica && <Incluso plano={plano} />}
               <ul>
                 <li>
                   {plano.tipo === "fibra"

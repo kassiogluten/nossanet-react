@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgAtendimento from "../../../assets/fundo-atendimento-ao-cliente.png";
 
 export const Section8Container = styled.section`
   position: relative;
@@ -44,14 +45,28 @@ export const Section8Content = styled.div`
   }
 
   .box1 {
-    width: 488px;
-    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    background: var(--azul);
+    text-align: center;
+    img {
+      /* margin-bottom: 100px; */
+      width: 100%;
+    }
+
     box-shadow: 0px 0px 118px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 2rem;
     color: var(--azul);
-    padding: 30px;
+    padding: 60px 30px;
     z-index: 3;
+    button {
+      background: var(--branco);
+      color: var(--azulprimaria);
+      border-radius: 20px;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+    }
 
     h1 {
       font-weight: 700;
@@ -72,12 +87,13 @@ export const Section8Content = styled.div`
       color: var(--azulprimaria);
     }
     button {
-      color: white;
+      /* color: white; */
       font-size: 0.9rem;
       font-weight: 700;
-      background: var(--azulprimaria);
+      transition: 200ms;
+      /* background: var(--azulprimaria); */
       &:hover {
-        background: #002c4a;
+        background: #ddd;
       }
     }
   }

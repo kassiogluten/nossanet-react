@@ -1,7 +1,7 @@
 export const planos = [
   {
     tipo: "fibra",
-    plano: 100,
+    plano: 200,
     valor: "79",
     cidade: "Ipaba, MG",
     qualifica: true,
@@ -33,7 +33,7 @@ export const planos = [
   },
   {
     tipo: "fibra",
-    plano: 100,
+    plano: 200,
     valor: "79",
     cidade: "Periquito, MG",
     qualifica: true,
@@ -65,7 +65,7 @@ export const planos = [
   },
   {
     tipo: "fibra",
-    plano: 100,
+    plano: 200,
     valor: "79",
     cidade: "Naque, MG",
     qualifica: true,
@@ -97,7 +97,7 @@ export const planos = [
   },
   {
     tipo: "fibra",
-    plano: 100,
+    plano: 200,
     valor: "79",
     cidade: "Perpétuo Socorro, MG",
     qualifica: true,
@@ -129,7 +129,7 @@ export const planos = [
   },
   {
     tipo: "fibra",
-    plano: 100,
+    plano: 200,
     valor: "79",
     cidade: "Belo Oriente, MG",
     qualifica: true,
@@ -161,7 +161,7 @@ export const planos = [
   },
   {
     tipo: "fibra",
-    plano: 100,
+    plano: 200,
     valor: "79",
     cidade: "Vale Verde, MG",
     qualifica: true,
@@ -193,7 +193,7 @@ export const planos = [
   },
   {
     tipo: "fibra",
-    plano: 100,
+    plano: 200,
     valor: "79",
     cidade: "Boachá, MG",
     qualifica: true,
