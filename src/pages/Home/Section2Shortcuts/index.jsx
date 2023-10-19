@@ -48,7 +48,7 @@ export default function Section2() {
           </motion.a>
           <motion.a
             variants={itemA}
-            href="https://central.nossanettelecom.net.br/BoletosListar"
+            href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC"
             target="blank"
           >
             <div className="boxes">

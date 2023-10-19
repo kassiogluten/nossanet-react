@@ -303,7 +303,7 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-              {myPlan === 100
+              {myPlan === 200
                 ? 79
                 : myPlan === 400
                 ? 99
@@ -338,7 +338,7 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-              {myPlan === 100
+              {myPlan === 200
                 ? 79
                 : myPlan === 400
                 ? 99
@@ -359,6 +359,10 @@ export function Pages({
 
     const [isLoading, setIsLoading] = useState(false);
     let history = useHistory();
+    //redirect to a new tab
+    const redirect = (url) => {
+      window.open("https://wa.me/553121098560?text=" + url, "_blank");
+    };
 
     const onSubmit = async () => {
       // Send form email
@@ -382,13 +386,15 @@ export function Pages({
             city,
         };
 
-        await emailjs.send(
-          process.env.REACT_APP_SERVICE_ID,
-          process.env.REACT_APP_TEMPLATE_ID2,
+        /* await emailjs.send(
+          "service_jcdss7j",
+          "template_6fybc9r",
           templateParams,
-          process.env.REACT_APP_USER_ID
-        );
+          "user_YlRcGwEEUUHkmqcQ1tJGn"
+        ); */
         setIsLoading(false);
+        redirect(Object.entries(templateParams).map(obj => (`${obj[0]}: ${obj[1]}`)).join("%0a"))
+        // return;
         setPag(pag + 1);
         reset();
         history.push("/obrigado");
@@ -469,7 +475,7 @@ export function Pages({
             <h2>{myPlan} Mega</h2>
             <p>Valor</p>
             <h2>
-              {myPlan === 100
+              {myPlan === 200
                 ? 79
                 : myPlan === 400
                 ? 99

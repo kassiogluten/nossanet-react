@@ -49,7 +49,7 @@ export default function Header() {
             <FiMenu size={30} onClick={() => setMenuMobileOpen(true)} />
           </ul>
 
-          <a href="https://central.nossanettelecom.net.br/">
+          <a href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC">
             <Button leftIcon={<FiUser size={20} />}>Minha conta</Button>
           </a>
         </div>
@@ -91,7 +91,7 @@ export default function Header() {
                   <li>Para empresas</li>
                 </NavLink>
               </ul>
-              <a href="https://central.nossanettelecom.net.br/">
+              <a href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC">
                 <Button leftIcon={<FiUser size={20} />}>Minha conta</Button>
               </a>
             </div>
@@ -104,7 +104,7 @@ export default function Header() {
                 </div>
               </a>
               <a
-                href="https://central.nossanettelecom.net.br/BoletosListar"
+                href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC"
                 target="blank"
               >
                 <div className="boxes">

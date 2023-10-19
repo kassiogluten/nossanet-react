@@ -34,7 +34,7 @@ export default function Section1Hero() {
       <Section1HeroContent>
         <motion.h1 variants={variantsItems}>Obrigado!</motion.h1>
         <motion.h2 variants={variantsItems}>
-          Entraremos em contato em breve.
+          Continue o contato no Whatsapp.
         </motion.h2>
       </Section1HeroContent>
     </MotionSection1HeroContainer>

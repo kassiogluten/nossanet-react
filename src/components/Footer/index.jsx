@@ -33,11 +33,11 @@ export default function Footer() {
           <div className="col2">
             <h3>Para você</h3>
             <div className="line"></div>
-            <a target="blank" href="https://central.nossanettelecom.net.br/">
+            <a target="blank" href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC">
               Central do cliente <FiArrowUpRight size="20px" />
             </a>
             <a href="#planos">Nossos planos</a>
-            <a target="blank" href="https://central.nossanettelecom.net.br/">
+            <a target="blank" href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC">
               2ª via de faturas <FiArrowUpRight size="20px" />
             </a>
             <a href="#faleconosco">Atendimento ao cliente</a>

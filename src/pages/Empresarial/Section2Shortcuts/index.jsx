@@ -32,7 +32,7 @@ export default function Section2() {
         <Shorcut variants={container} initial="hidden" animate="show">
           <motion.a
             variants={itemA}
-            href="https://central.nossanettelecom.net.br/BoletosListar"
+            href="https://erp.nossanettelecom.net.br/sac/login/?sys=SAC"
             target="blank"
           >
             <div className="boxes">
